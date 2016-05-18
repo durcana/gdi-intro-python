@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Introduction to Python | Girl Develop It Ann Arbor</title>
+  <title>Introduction to Python | Girl Develop It Class 4</title>
 
     <meta name="description" content="This is the official Girl Develop It Core Intro to Python course. The course is meant to be taught in four two-hour sessions. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
 
@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" href="css/reveal.min.css">
   <link rel="stylesheet" href="css/theme/gdiaa.css" id="theme">
-  <link rel="stylesheet" href="lib/css/rainbow.css">
+  <link rel="stylesheet" href="lib/css/light.css">
   <link rel="stylesheet" href="css/print/pdf.css" media="print">
 
   <script src="lib/js/head.min.js"></script>
@@ -27,32 +27,30 @@
   <div class="reveal">
     <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
-      <!-- INTRO -->
+      <!-- Opening slide -->
       <section>
-        <!-- Opening slide -->
-        <section>
-          <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
-          <div class="box--small">
-            <h3><span class="green">Intro to Python</span><br/><small><span class="blue">Day 4</span></small></h3>
-            <p><small>Jeanette Head &nbsp; | &nbsp; @JeanetteHead17 &nbsp; | &nbsp; @gdiannarbor  &nbsp; | &nbsp; #GDIA2 &nbsp; | &nbsp; #IntroToPython</small></p>
-          </div>
-        </section>
+        <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
+        <div class="box--small">
+          <h3><span class="green">Intro to Python Class 4</span></h3>
 
-        <section>
-            <h3>Review</h3>
-            <ul class="box list--xtall copy--small">
-                <li>Method calls</li>
-                <li>Combining lists and dictionaries</li>
-                <li>Builtins for collections</li>
-            </ul>
-        </section>
+        </div>
       </section>
 
-                <!-- Block 1  - Intro to Classes and OOP - 20 minutes -->
-                <section>
-                  <h3>Functions on Dictionaries</h3>
-                  <p></p>
-                  <pre><code contenteditable class=" python">
+      <section>
+          <h3>Review</h3>
+          <ul class="box list--xtall copy--small">
+              <li>Method calls</li>
+              <li>Combining lists and dictionaries</li>
+              <li>Builtins for collections</li>
+          </ul>
+      </section>
+
+
+      <!-- Block 1  - Intro to Classes and OOP - 20 minutes -->
+      <section>
+        <h3>Functions on Dictionaries</h3>
+        <p></p>
+        <pre><code contenteditable class=" python">
 character = {
     'x': 10,
     'y': 20,
@@ -69,33 +67,33 @@ def heal(character, amount):
     if character['health'] > 100:
         character['health'] = 100
                   </code></pre>
-                </section>
+        </section>
 
-                <section>
-                  <h3>Functional Python</h3>
-                  <p class="box--small"><strong>Functional Programming</strong> is programming<br/><em>without assignment statements</em>.</p>
-                  <p class=" copy--small box--small fragment">Purely functional code and languages exist, but it is more common to use functional alongside declarative programming.</p>
-                  <p class="copy--small box--small fragment">Python is a not a purely functional language, but it can be used (and is commonly used) for functional programming.</p>
-                  <p class="copy--small box--small fragment">There are four functions that are used for functional programming: Range, Filter, Map, and Reduce</p>
-                </section>
+        <section>
+          <h3>Functional Python</h3>
+          <p class="box--small"><strong>Functional Programming</strong> is programming<br/><em>without assignment statements</em>.</p>
+          <p class=" copy--small box--small fragment">Purely functional code and languages exist, but it is more common to use functional alongside declarative programming.</p>
+          <p class="copy--small box--small fragment">Python is a not a purely functional language, but it can be used (and is commonly used) for functional programming.</p>
+          <p class="copy--small box--small fragment">There are four functions that are used for functional programming: Range, Filter, Map, and Reduce</p>
+        </section>
 
-                <section>
-                  <h3>Functional Python: Range</h3>
-                  <p class="fragment box--small">We already learned range</p>
-                  <p class="fragment box--small copy--small">What do the following functions output?</p>
-                  <pre><code contenteditable class="small fragment python">
-range(5)
-                  </code></pre>
-                  <pre><code contenteditable class="small fragment python">
-range(5, 10)
-                  </code></pre>
-                  <pre><code contenteditable class="small fragment python">
-range(10, 20, 2)
-                  </code></pre>
-                  <pre><code contenteditable class="small fragment python">
-range(20, 8, -2)
-                  </code></pre>
-                </section>
+        <section>
+          <h3>Functional Python: Range</h3>
+          <p class="fragment box--small">We already learned range</p>
+          <p class="fragment box--small copy--small">What do the following functions output?</p>
+          <pre><code contenteditable class="small fragment python">
+  range(5)
+          </code></pre>
+          <pre><code contenteditable class="small fragment python">
+  range(5, 10)
+          </code></pre>
+          <pre><code contenteditable class="small fragment python">
+  range(10, 20, 2)
+          </code></pre>
+          <pre><code contenteditable class="small fragment python">
+  range(20, 8, -2)
+          </code></pre>
+        </section>
 
                 <section>
                     <h3>Functional Python: Map</h3>
@@ -147,7 +145,6 @@ squares = map(square, range(10))
                             <td>Read about the <a href="https://en.wikipedia.org/wiki/Caesar_cipher">Caesar Cipher</a> or find a similarly simple encryption mechanism online. You should find the ord() and chr() functions helpful, as well as the modulus operator '%'</td>
                         </tr>
                     </table>
-                    <p class="copy--xsmall box--small">continued on next page...</p>
                 </section>
 
                 <section>
@@ -190,25 +187,16 @@ squares = map(square, range(10))
                     </table>
                 </section>
 
-      <section>
+ 
         <section>
             <h3>Questions?</h3>
         </section>
 
-        <section>
-          <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
-          <div class="box--small">
-            <h3><span class="green">Intro to Python</span></h3>
-            <p><small>Jeanette Head &nbsp; | &nbsp; @JeanetteHead17 &nbsp; | &nbsp; @gdiannarbor  &nbsp; | &nbsp; #GDIA2 &nbsp; | &nbsp; #IntroToPython</small></p>
-          </div>
-        </section>
-      </section>
 
     </div>
 
     <footer>
       <div class="copyright">
-        @gdiannarbor  &nbsp; | &nbsp; #GDIA2 &nbsp; | &nbsp; #IntroToPython &nbsp;
         <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
       </div>
     </footer>

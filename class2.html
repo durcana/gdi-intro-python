@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Introduction to Python | Girl Develop It Ann Arbor</title>
+  <title>Introduction to Python | Girl Develop It Class 2</title>
 
     <meta name="description" content="This is the official Girl Develop It Core Intro to Python course. The course is meant to be taught in four two-hour sessions. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
 
@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" href="css/reveal.min.css">
   <link rel="stylesheet" href="css/theme/gdiaa.css" id="theme">
-  <link rel="stylesheet" href="lib/css/rainbow.css">
+  <link rel="stylesheet" href="lib/css/light.css">
   <link rel="stylesheet" href="css/print/pdf.css" media="print">
 
   <script src="lib/js/head.min.js"></script>
@@ -27,14 +27,11 @@
   <div class="reveal">
     <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
-      <!-- INTRO -->
-      <section>
         <!-- Opening slide -->
         <section>
           <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
           <div class="box--small">
-            <h3><span class="green">Intro to Python</span></h3>
-            <p><small>Jeanette Head &nbsp; | &nbsp; @JeanetteHead17 &nbsp; | &nbsp; @gdiannarbor  &nbsp; | &nbsp; #GDIA2 &nbsp; | &nbsp; #IntroToPython</small></p>
+            <h3><span class="green">Intro to Python Class 2</span></h3>
           </div>
         </section>
 
@@ -56,10 +53,8 @@
                 <li class ="fragment">Functions</li>
             </ul>
         </section>
-      </section>
 
       <!-- BOOLEANS & CONDITIONALS -->
-      <section>
         <section>
             <h3>Boolean Expressions</h3>
             <p class="box copy--small">We can tell the computer to compare values and return True or False. These are called <strong>Boolean expressions</strong></p>
@@ -124,9 +119,13 @@ print(a >= 4)
             <div class="fragment box--small">
             <p class="copy--xsmall">We achieve this using <strong>if</strong> statements</p>
             <pre><code contenteditable class="small python">
-if x == 5:
-    print('x is equal to 5')
+    if x == 5:
+        print('x is equal to 5')
             </code></pre></div>
+
+        </section>
+        <section>
+            <h3>Conditionals</h3>
             <div class="fragment box--small">
             <p class="copy--xsmall">We often want a different block to execute if the statement is false.<br/>This can be accomplished using <strong>else</strong></p>
             <pre><code contenteditable class="small python">
@@ -207,10 +206,9 @@ elif input_value == '2':
     print('The warg eventually looses interest and wanders off')
             </code></pre>
         </section>
-      </section>
+
 
       <!-- LOOPS -->
-      <section>
         <!-- Block 2 25 minutes -->
         <section>
           <h3>Iteration</h3>
@@ -275,171 +273,149 @@ for number in numbers:
                     </ul>
                 </section>
 
-                <!-- Let's Develop It - 10 minutes -->
-                <section>
-                    <h3>Let's Develop It</h3>
-                    <ul class="list--xtall copy--small box">
-                        <li class="fragment">Write a program that obtains user input like the last program</li>
-                        <li class="fragment">However, this program should not exit until the user types "quit".</li>
-                        <li class="fragment">Hint: A loop should help you</li>
-                    </ul>
-                </section>
-      </section>
+        <!-- Let's Develop It - 10 minutes -->
+        <section>
+            <h3>Let's Develop It</h3>
+            <ul class="list--xtall copy--small box">
+                <li class="fragment">Write a program that takes numbers from user input and adds thems all together for a final result.</li>
+                <li class="fragment">This program should stop taking input, display the answer and exit when the user types "quit".</li>
+            </ul>
+        </section>
+
 
       <!-- FUNCTIONS -->
-      <section>
-                <!-- Block 3 30 minutes -->
-                <section>
-                    <h3>Functions</h3>
-                    <p class="copy--small box--small">A named section of code that performs a specific task</p>
-                    <p class="copy--small box--small fragment">When one uses a function, one makes a function <strong>call</strong></p>
-                    <div class="fragment"><p class="copy--small box--small ">We have already made a function call<br/>when using the <code>type</code>, <code>int</code>, or <code>float</code> functions</p>
-                    <pre><code contenteditable class=" python small">
+        <!-- Block 3 30 minutes -->
+        <section>
+            <h3>Functions</h3>
+            <p class="copy--small box--small">A named section of code that performs a specific task</p>
+            <p class="copy--small box--small fragment">When one uses a function, one makes a function <strong>call</strong></p>
+            <div class="fragment"><p class="copy--small box--small ">We have already made a function call<br/>when using the <code>type</code>, <code>int</code>, or <code>float</code> functions</p>
+            <pre><code contenteditable class=" python small">
 a = '3'
 print(type(a))
 a = float(a)
-                    </code></pre></div>
-                </section>
+            </code></pre></div>
+        </section>
 
-                <section>
-                    <h3>Function calls</h3>
-                    <pre><code contenteditable class="small python">
+        <section>
+            <h3>Function calls</h3>
+            <pre><code contenteditable class="small python">
 a = 3
 print(type(a))
-                    </code></pre>
-                    <p class="copy--small box--small">A function can take <strong>arguments</strong></p>
-                    <p class="copy--small box--small">In the example above, the variable <code>a</code> is passed<br/>as an argument to the function <code>type</code></p>
-                    <p class="copy--small box--small fragment">Arguments can also be called <strong>parameters</strong></p>
-                    <div class="fragment "><pre><code contenteditable class="python" style="min-height: 50px;">
+            </code></pre>
+            <p class="copy--small box--small">A function can take <strong>arguments</strong></p>
+            <p class="copy--small box--small">In the example above, the variable <code>a</code> is passed<br/>as an argument to the function <code>type</code></p>
+            <p class="copy--small box--small fragment">Arguments can also be called <strong>parameters</strong></p>
+            <div class="fragment "><pre><code contenteditable class="python" style="min-height: 50px;">
 # Some more function call examples
 
 int('32')
 str(32)
-                    </code></pre></div>
-                </section>
+            </code></pre></div>
+        </section>
 
-                <section>
-                    <h3>Function definition</h3>
-                    <p class="copy--small box--small">The following example is a <strong>function definition</strong>.<br/>This allows us to create our own functions</p>
-                    <pre><code contenteditable class="small python">
+        <section>
+            <h3>Function definition</h3>
+            <p class="copy--small box--small">The following example is a <strong>function definition</strong>.<br/>This allows us to create our own functions</p>
+            <pre><code contenteditable class="small python">
 def print_plus_5(x):
-    print(x + 5)
-                    </code></pre>
-                    <p class="copy--small box--small fragment">The function definition has the following parts</p>
-                    <ul class="copy--xsmall box--small list--tall">
-                        <li class="fragment">The <code>def</code> keyword signifies we are defining a function</li>
-                        <li class="fragment">The name of the function being defined - <code>print_plus_5</code></li>
-                        <li class="fragment">The arguments in parentheses - <code>x</code></li>
-                        <li class="fragment">The function <strong>body</strong>, which is a block of indented code that executes when the function is called. - <code>print x + 5</code></li>
-                    </ul>
-                </section>
+print(x + 5)
+            </code></pre>
+            <p class="copy--small box--small fragment">The function definition has the following parts</p>
+            <ul class="copy--xsmall box--small list--tall">
+                <li class="fragment">The <code>def</code> keyword signifies we are defining a function</li>
+                <li class="fragment">The name of the function being defined - <code>print_plus_5</code></li>
+                <li class="fragment">The arguments in parentheses - <code>x</code></li>
+                <li class="fragment">The function <strong>body</strong>, which is a block of indented code that executes when the function is called. - <code>print x + 5</code></li>
+            </ul>
+        </section>
 
-                <section>
-                    <h3>Function returns</h3>
-                    <p class="copy--small box--small">A function can also <strong>return</strong> a value</p>
-                    <div class="copy--small box--small fragment"><p>To do this, one uses the <strong>return</strong> keyword</p>
-                    <pre><code contenteditable class=" small python">
+        <section>
+            <h3>Function returns</h3>
+            <p class="copy--small box--small">A function can also <strong>return</strong> a value</p>
+            <div class="copy--small box--small fragment"><p>To do this, one uses the <strong>return</strong> keyword</p>
+            <pre><code contenteditable class=" small python">
 def plus_5(x):
-    return x + 5
+return x + 5
 
 y = plus_5(4)
-                    </code></pre></div>
-                    <ul class="list--tall copy--xsmall">
-                        <li class="fragment">This allows us to call a function to obtain a value for later use.<br/>(Not the same as printing the value)</li>
-                        <li class="fragment">In this example, the function call <code>plus_5(4)</code> evaluates to 9, and <code>y</code> is set to this value</li>
-                        <li class="fragment">To determine what a function will return, use the <strong>substitution method</strong>.</li>
-                        <li class="fragment">If return is not used, the function returns <strong>None</strong></li>
-                    </ul>
-                </section>
+            </code></pre></div>
+            <ul class="list--tall copy--xsmall">
+                <li class="fragment">This allows us to call a function to obtain a value for later use.<br/>(Not the same as printing the value)</li>
+                <li class="fragment">In this example, the function call <code>plus_5(4)</code> evaluates to 9, and <code>y</code> is set to this value</li>
+                <li class="fragment">To determine what a function will return, use the <strong>substitution method</strong>.</li>
+                <li class="fragment">If return is not used, the function returns <strong>None</strong></li>
+            </ul>
+        </section>
 
-                <section>
-                    <h3>Functions with no arguments</h3>
-                    <p class="copy--small box--small">A function does not have to take arguments,<br/>as in the following example:
-                    <pre><code contenteditable class="small python">
+        <section>
+            <h3>Functions with no arguments</h3>
+            <p class="copy--small box--small">A function does not have to take arguments,<br/>as in the following example:
+            <pre><code contenteditable class="small python">
 def newline():
-    print('')
+print('')
 
 newline()
 # prints an empty line. Nothing is returned
-                    </code></pre>
-                    <p class="copy--xsmall box--small ">This is useful when the function does some work but doesn't need any parameters.<br/>i.e. The function is intended to always do the same thing</p>
-                </section>
+            </code></pre>
+            <p class="copy--xsmall box--small ">This is useful when the function does some work but doesn't need any parameters.<br/>i.e. The function is intended to always do the same thing</p>
+        </section>
 
-                <section>
-                    <h4>Functions with more than one argument</h4>
-                    <p class="copy--small box--small">A function can also take more than one argument separated by commas. For example:</p>
-                    <pre><code contenteditable class="small python">
+        <section>
+            <h4>Functions with more than one argument</h4>
+            <p class="copy--small box--small">A function can also take more than one argument separated by commas. For example:</p>
+            <pre><code contenteditable class="small python">
 def find_rectangle_area(width, height):
-    return width * height
+return width * height
 
 area = find_rectangle_area(3, 4)
 # area is set to the value 12
-                    </code></pre>
-                </section>
+            </code></pre>
+        </section>
 
-                <section>
-                    <h3>Scope</h3>
-                    <p class="copy--small box--small">The <strong>scope</strong> of a variable is the area of code in which a variable is still valid and can be used.</p>
-                    <p class="copy--small box--small fragment">Variables defined within a function can not be used elsewhere.</p>
-                    <div class="fragment "><pre><code contenteditable class="small python">
-def get_triangle_area(base, height):
-    rect_area = base * height
-    return rect_area / 2.0
-
-triangle_area = get_triangle_area(10, 20)
-
-print(height)
-# NameError
-print(rect_area)
-# NameError
-                    </code></pre></div>
-                </section>
-
-
-                <section>
-                    <h3>Import statements</h3>
-                    <p class="copy--small box--small">The <strong>import</strong> statement allows us to use Python code that is defined in one file in a different file</p>
-                    <p class="copy--small box--small fragment">Import statements can be used to import various specialized libraries - such as scikit or nympy - into our code</p>
-                    <p class="copy--small box--small fragment"><strong>def library:</strong> A published collection of useful functions for doing a specific type of coding.  There are math, statistics, data science, and graphics libraries, to name a few types.</p>
-                    <p class="copy--small box--small fragment">The <strong>from</strong> keyword allows us to only import parts of a Python file</p>
-                    <div class="fragment "><pre><code contenteditable class="python" style="min-height: 50px;">
+        <section>
+            <h3>Import statements</h3>
+            <p class="copy--small box--small">The <strong>import</strong> statement allows us to use Python code that is defined in one file in a different file</p>
+            <p class="copy--small box--small fragment">Import statements can be used to import various specialized libraries - such as scikit or nympy - into our code</p>
+            <p class="copy--small box--small fragment"><strong>def library:</strong> A published collection of useful functions for doing a specific type of coding.  There are math, statistics, data science, and graphics libraries, to name a few types.</p>
+            <p class="copy--small box--small fragment">The <strong>from</strong> keyword allows us to only import parts of a Python file</p>
+            <div class="fragment "><pre><code contenteditable class="python" style="min-height: 50px;">
 from math import sqrt
 sqrt(2)
-                    </code></pre></div>
-                </section>
+            </code></pre></div>
+        </section>
 
-                <!-- Let's develop it: 15 minutes -->
-                <section>
-                    <h3>Let's Develop It</h3>
-                    <ul class="list--xtall copy--small box--small">
-                        <li>Write a program that uses at least one function to solve a geometry problem</li>
-                        <li>Hint: You might use a loop that obtains user input, does the calculation, then prints the answer. As before, the user should be able to quit by entering "quit"</li>
-                        <li>Hint: You can import your function in the shell and call it with different parameters to test it out</li>
-                        <li>Hint: Download <a href="http://nicklang.com/gdi-intro-python/examples/geometry.py">geometry.py</a> and use it as an example</li>
-                    </ul>
-                    <p class="copy--small box--small">If you'd like to try something different or in addition,<br/>try the next slide...</p>
-                </section>
+        <!-- Let's develop it: 15 minutes -->
+        <section>
+            <h3>Let's Develop It</h3>
+            <ul class="list--xtall copy--small box--small">
+                <li>Write a program that uses at least one function to solve a geometry problem</li>
+                <li>Hint: You might use a loop that obtains user input, does the calculation, then prints the answer. As before, the user should be able to quit by entering "quit"</li>
+                <li>Hint: You can import your function in the shell and call it with different parameters to test it out</li>
+                <li>Hint: Download <a href="http://nicklang.com/gdi-intro-python/examples/geometry.py">geometry.py</a> and use it as an example</li>
+            </ul>
+            <p class="copy--small box--small">If you'd like to try something different or in addition,<br/>try the next slide...</p>
+        </section>
 
-                <section>
-                    <h3>Let's Develop It</h3>
-                    <ul class="list--tall copy--small box--small">
-                        <li>Write a program that asks the user to guess a number between a given range, such as 1 to 10</li>
-                        <li>The program should give the user hints such as "too high" or "too low". Alternatively, the hints might be "warm" or "cold" depending on how close they are to the number</li>
-                        <li>The computer will need to have a random number for the user to guess:</li>
-                        <pre><code contenteditable class="python" style="min-height: 50px;">
+        <section>
+            <h3>Let's Develop It</h3>
+            <ul class="list--tall copy--small box--small">
+                <li>Write a program that asks the user to guess a number between a given range, such as 1 to 10</li>
+                <li>The program should give the user hints such as "too high" or "too low". Alternatively, the hints might be "warm" or "cold" depending on how close they are to the number</li>
+                <li>The computer will need to have a random number for the user to guess:</li>
+                <pre><code contenteditable class="python" style="min-height: 50px;">
 #At the top of the file
 from random import randint
 
 # Use this line where you need to have a random number.
 # (Hint, this is probably used before the user input loop)
 random_number = randint(1, 10)
-                        </code></pre>
-                    </ul>
-                </section>
-      </section>
+                </code></pre>
+            </ul>
+        </section>
+ 
 
       <!-- OUTRO -->
-      <section>
         <section>
           <h3>Questions?</h3>
         </section>
@@ -509,20 +485,10 @@ hello is a &ltclass string&gt
 
           <h6><a href="https://lpthw.readthedocs.org/en/latest/ex28/">https://lpthw.readthedocs.org/en/latest/ex28/</a></h6>
         </section>
-
-        <section>
-          <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
-          <div class="box--small">
-            <h3><span class="green">Intro to Python</span></h3>
-            <p><small>Jeanette Head &nbsp; | &nbsp; @JeanetteHead17 &nbsp; | &nbsp; @gdiannarbor  &nbsp; | &nbsp; #GDIA2 &nbsp; | &nbsp; #IntroToPython</small></p>
-          </div>
-        </section>
-     </section>
     </div>
 
     <footer>
       <div class="copyright">
-        @gdiannarbor  &nbsp; | &nbsp; #GDIA2 &nbsp; | &nbsp; #IntroToPython &nbsp;
         <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
       </div>
     </footer>

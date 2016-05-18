@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Introduction to Python | Girl Develop It Ann Arbor</title>
+  <title>Introduction to Python | Girl Develop It</title>
 
     <meta name="description" content="This is the official Girl Develop It Core Intro to Python course. The course is meant to be taught in four two-hour sessions. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
 
@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" href="css/reveal.min.css">
   <link rel="stylesheet" href="css/theme/gdiaa.css" id="theme">
-  <link rel="stylesheet" href="lib/css/rainbow.css">
+  <link rel="stylesheet" href="lib/css/light.css">
   <link rel="stylesheet" href="css/print/pdf.css" media="print">
 
   <script src="lib/js/head.min.js"></script>
@@ -28,46 +28,41 @@
   <div class="reveal">
     <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
-      <!-- INTRO -->
-      <section>
+
         <!-- Opening slide -->
         <section>
           <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
           <div class="box--small">
-            <h3><span class="green">Intro to Python</span></h3>
-            <p><small>Jeanette Head &nbsp; | &nbsp; @JeanetteHead17 &nbsp; | &nbsp; @gdiannarbor  &nbsp; | &nbsp; #GDIA2 &nbsp; | &nbsp; #IntroToPython</small></p>
+            <h3><span class="green">Intro to Python Class 1</span></h3>
           </div>
         </section>
 
-        <!-- About Me -->
-        <section>
-          <h3>About Jeanette</h3>
-          <div class="box">
-            <p> Software Consultant &amp; Developer at <span class="green">Atomic Object</span></p>
-            <p> Organizer of <span class="pink">Ann Arbor Pyladies</span></p>
-            <div class="box">
-              <span class="green">Skateboarder - </span>
-              <span class="red">Snowboarder - </span>
-              <span class="yellow">Doctor Who fan - </span><br/>
-              <span class="blue">Harry Potter fan - </span>
-              <span class="pink">board game player</span>
-            </div>
-            <p class="box copy--small">Looking forward to learning more skateboarding this summer </p>
-            <aside class="notes"></aside>
+
+        <!-- Welcome-->
+        <section class="hide-pdf">
+          <h3>Welcome!</h3>
+          <div class = "left-align">
+          <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+          <p class ="green">Some "rules"</p>
+          <ul>
+            <li>We are here for you!</li>
+            <li>Every question is important</li>
+            <li>Help each other</li>
+            <li>Have fun</li>
+          </ul>
           </div>
         </section>
-        <!-- TODO Jeanette -->
 
-        <!-- Meet the Team -->
         <section>
-          <h3>Meet the team!</h3>
-          <div class="box">
-            <ol class="list--tall">
-              <li>What is your <span class="green">name</span>?</li>
-              <li>What do you hope to get out of <span class="yellow">this class</span>?</li>
-              <li>What are you looking forward to this <span class="pink">summer</span>?</li> <!-- TODO Jeanette: Speaker's question! Fave cookie? Fave dev tool? Fave holiday? Totally your choice! -->
-            </ol>
-            <aside class="notes"></aside>
+          <h3>Welcome!</h3>
+          <div class = "left-align">
+          <p class = "blue">Tell us about yourself.</p>
+          <ul>
+            <li>Who are you?</li>
+            <li>What do you hope to get out of the class?</li>
+            <li>What is your favorite or dream vacation destination?</li>
+
+          </ul>
           </div>
         </section>
 
@@ -81,97 +76,96 @@
             <li class ="fragment">Development Environment Setup</li>
           </ul>
         </section>
-      </section>
+
 
       <!-- WHAT IS PYTHON : 25 minutes -->
+
       <section>
-        <section>
-          <h3>Why Python?</h3>
-          <ul class="list--tall copy--small box--small">
-            <li class ="fragment">Suitable for beginners, yet used by professionals</li>
-            <li class ="fragment">Readable, maintainable code</li>
-            <li class ="fragment">Rapid rate of development</li>
-            <li class ="fragment">Few "magical" side-effects</li>
-            <li class ="fragment">Variety of applications</li>
-          </ul>
-        </section>
-
-        <section>
-          <h3>What is Python used for?</h3>
-          <ul class="list--tall copy--small box--small">
-            <li class ="fragment">System Administration (Fabric, Salt, Ansible)</li>
-            <li class ="fragment">3D animation and image editing (Maya, Blender, Gimp)</li>
-            <li class ="fragment">Scientific computing (numpy, scipy)</li>
-            <li class ="fragment">Web development (Django, Flask)</li>
-            <li class ="fragment">Game Development (Civilization 4, EVE Online)</li>
-          </ul>
-        </section>
-
-        <section>
-          <h3>Who is using Python?</h3>
-          <ul class="list--tall copy--small box--small">
-            <li>Disney</li>
-            <li>Dropbox</li>
-            <li>Canonical and Red Hat</li>
-            <li>Google</li>
-            <li>NASA</li>
-          </ul>
-        </section>
+        <h3>Why Python?</h3>
+        <ul class="list--tall copy--small box--small">
+          <li class ="fragment">Suitable for beginners, yet used by professionals</li>
+          <li class ="fragment">Readable, maintainable code</li>
+          <li class ="fragment">Rapid rate of development</li>
+          <li class ="fragment">Few "magical" side-effects</li>
+          <li class ="fragment">Variety of applications</li>
+        </ul>
       </section>
+
+      <section>
+        <h3>What is Python used for?</h3>
+        <ul class="list--tall copy--small box--small">
+          <li class ="fragment">System Administration (Fabric, Salt, Ansible)</li>
+          <li class ="fragment">3D animation and image editing (Maya, Blender, Gimp)</li>
+          <li class ="fragment">Scientific computing (numpy, scipy)</li>
+          <li class ="fragment">Web development (Django, Flask)</li>
+          <li class ="fragment">Game Development (Civilization 4, EVE Online)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Who is using Python?</h3>
+        <ul class="list--tall copy--small box--small">
+          <li>Disney</li>
+          <li>Dropbox</li>
+          <li>Canonical and Red Hat</li>
+          <li>Google</li>
+          <li>NASA</li>
+        </ul>
+      </section>
+
 
       <!-- WHAT IS PROGRAMMING -->
       <section>
-        <section>
-            <h3>What is programming?</h3>
-            <ul class="list--xtall box--small copy--small">
-                <li class="fragment">Teaching the computer to do a task</li>
-                <li class="fragment">A program is made of one or more files of code, each of which solve part of the overall task.</li>
-                <li class="fragment">The code that you program is human readable but also needs to exist in a form that the computer can run directly. This form is not human readable.</li>
-                <li class="fragment">Don't focus on what's "under the hood" for now. We will "drive the car" first.</li>
-                <li class="fragment">In other words, there are many layers to the onion. We start at one layer and slowly move toward layers that are beneath or above us.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h4>Command line, Python Shell, Text Editors</h4>
-            <table class="copy--small box">
-                <tr>
-                    <td style="width: 200px;"><strong>Terminal</strong></td>
-                    <td style="padding-bottom: 20px;">A program that has a <span class="blue">command line interface</span> and <span class="green">issues commands to the operating system</span>.</td>
-                </tr>
-                <tr>
-                    <td><strong>Python Shell</strong></td>
-                    <td style="padding-bottom: 20px;">A <span class="blue">command line program</span> that runs inside of the terminal, <span class="green">takes Python code</span> as input, interprets it, and prints out any results.</td>
-                </tr>
-                <tr>
-                    <td><strong>Text Editor</strong></td>
-                    <td style="padding-bottom: 20px;">A <span class="blue">program that opens text files</span> and allows the user to edit and save them. (Different than a word processor).</td>
-                </tr>
-            </table>
-        </section>
-
-        <section>
-            <h3>Example Text Editors</h3>
-            <table class="copy--small" style="width: auto; margin: 2em auto;">
-                <tr>
-                    <td style="width: 200px;"><strong>Linux</strong></td>
-                    <td style="padding-bottom: 20px;">Gedit, Jedit, Kate</td>
-                </tr>
-                <tr>
-                    <td><strong>MacOSX</strong></td>
-                    <td style="padding-bottom: 20px;">TextMate, TextWrangler</td>
-                </tr>
-                <tr>
-                    <td><strong>Windows</strong></td>
-                    <td style="padding-bottom: 20px;">Notepad++</td>
-                </tr>
-                <tr>
-                    <td><strong>All</strong></td>
-                    <td style="padding-bottom: 20px;">Sublime Text, Vim, Emacs</td>
-                </tr>
-            </table>
-        </section>
+          <h3>What is programming?</h3>
+          <ul class="list--xtall box--small copy--small">
+              <li class="fragment">Teaching the computer to do a task</li>
+              <li class="fragment">A program is made of one or more files of code, each of which solve part of the overall task.</li>
+              <li class="fragment">The code that you program is human readable but also needs to exist in a form that the computer can run directly. This form is not human readable.</li>
+              <li class="fragment">Don't focus on what's "under the hood" for now. We will "drive the car" first.</li>
+              <li class="fragment">In other words, there are many layers to the onion. We start at one layer and slowly move toward layers that are beneath or above us.</li>
+          </ul>
       </section>
+
+      <section>
+          <h4>Command line, Python Shell, Text Editors</h4>
+          <table class="copy--small box">
+              <tr>
+                  <td style="width: 200px;"><strong>Terminal</strong></td>
+                  <td style="padding-bottom: 20px;">A program that has a <span class="blue">command line interface</span> and <span class="green">issues commands to the operating system</span>.</td>
+              </tr>
+              <tr>
+                  <td><strong>Python Shell</strong></td>
+                  <td style="padding-bottom: 20px;">A <span class="blue">command line program</span> that runs inside of the terminal, <span class="green">takes Python code</span> as input, interprets it, and prints out any results.</td>
+              </tr>
+              <tr>
+                  <td><strong>Text Editor</strong></td>
+                  <td style="padding-bottom: 20px;">A <span class="blue">program that opens text files</span> and allows the user to edit and save them. (Different than a word processor).</td>
+              </tr>
+          </table>
+      </section>
+
+      <section>
+          <h3>Example Text Editors</h3>
+          <table class="copy--small" style="width: auto; margin: 2em auto;">
+              <tr>
+                  <td style="width: 200px;"><strong>Linux</strong></td>
+                  <td style="padding-bottom: 20px;">Gedit, Jedit, Kate</td>
+              </tr>
+              <tr>
+                  <td><strong>MacOSX</strong></td>
+                  <td style="padding-bottom: 20px;">TextMate, TextWrangler</td>
+              </tr>
+              <tr>
+                  <td><strong>Windows</strong></td>
+                  <td style="padding-bottom: 20px;">Notepad++</td>
+              </tr>
+              <tr>
+                  <td><strong>All</strong></td>
+                  <td style="padding-bottom: 20px;">Sublime Text, Vim, Emacs</td>
+              </tr>
+          </table>
+      </section>
+
 
       <!-- Let's develop it: 10 minutes-->
       <section>
@@ -209,7 +203,6 @@
       </section>
 
       <!-- Variables & Arithmatic -->
-      <section>
         <section>
             <h3>Variables and Arithmetic</h3>
             <div class='box--small'><pre><code contenteditable class="python" style="min-height: 50px;">
@@ -278,26 +271,24 @@ print(type("But I don't like spam"))
             </ul>
         </section>
 
-            <section>
-                <h3>Data types - continued ...</h3>
-                <ul class="list--tall copy--small box--small">
-                    <li>Data values can be used with a set of <strong>operators</strong></li>
-                    <li>An "int" or "float" can be used with any of: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code></li>
-                    <li>A "string" can be used with any of: <code>+</code>, <code>*</code></li>
-                    <li>What happens if we try to use division or subtraction with a string?</li>
-                </ul>
-            <pre><code contenteditable class="python" style="min-height: 50px;">
-print("Spam" - "am")
-a = 'Spam and eggs'
-print(a / 'hashbrowns')
-print(a / 6)
-            </code></pre>
-            </section>
-
-      </section>
+        <section>
+            <h3>Data types - continued ...</h3>
+            <ul class="list--tall copy--small box--small">
+                <li>Objects can be used with a set of <strong>operators</strong></li>
+                <li>An "int" or "float" can be used with any of: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code></li>
+                <li>A "string" can be used with any of: <code>+</code>, <code>*</code></li>
+                <li>What happens if we try to use division or subtraction with a string?</li>
+            </ul>
+        <pre><code contenteditable class="python" style="min-height: 50px;">
+>>> print "Spam" / "eggs"
+Traceback (most recent call last):
+File "<stdin>", line 1, in <module>
+TypeError: unsupported operand type(s) for /: 'str' and 'str'
+        </code></pre>
+        </section>
+ 
 
       <!-- STATEMENTS & ERRORS -->
-      <section>
         <section>
             <h3>Errors</h3>
             <ul class="list--tall copy--small box--small">
@@ -325,7 +316,7 @@ b = 10
           </code></pre></div>
           <p class="copy--small">There are also <strong>semantic</strong> errors.<br/><small>These are harder to catch because the computer can't catch them for us.</small></p>
         </section>
-      </section>
+
 
       <!-- Let's develop it: 10 minutes -->
       <section>
@@ -337,7 +328,6 @@ b = 10
 
 
       <!-- DEV ENV SETUP : 30 Minutes -->
-      <section>
         <section>
             <h3>Using the Terminal</h3>
             <p class="copy--small box--small">Try each of the following commands in turn:</p>
@@ -370,22 +360,22 @@ b = 10
             </table>
         </section>
 
+
         <section>
             <h3>Creating a folder</h3>
-            <p class="copy--small box">We need a folder to save our work in.</p>
+            <p class="copy--small box">We need a folder to save and run our code from.</p>
             <div class="fragment">
-            <p class=" copy--xsmall">The <code>-&gt;</code>'s below indicate the expected output of the previous command.</p>
+            <p class=" copy--xsmall">($ shows the shell prompt where commands are entered. Lines without $ are output)</p>
             <pre><code contenteditable class=" bash small">
-pwd
--> /home/username
-mkdir Projects
-cd Projects
-mkdir gdi-intro-python
-cd gdi-intro-python
-pwd
--> /home/username/Projects/gdi-intro-python
+$ cd
+$ pwd
+/home/username ( or /User/username or similar)
+$ mkdir gdipython
+$ cd gdipython
+$ pwd
+/home/username/gdipython
             </code></pre>
-            <p class="copy--xsmall box--small">Now that the folders are made, we only have to use<br/><code>cd Projects/gdi-intro-python</code> in the future.</p>
+            <p class="copy--xsmall box--small">Now that the folders are made, we only have to use<br/><code>$ cd ~/gdipython</code> in the future.</p>
 
             </div>
         </section>
@@ -420,7 +410,6 @@ print(area)
             </code></pre>
             <p class="copy--small box--small">The user's input is a string, so we use <code>float()</code> to make it a number</p>
         </section>
-      </section>
 
       <!-- Let's develop it: 15 minutes -->
       <section>
@@ -430,7 +419,6 @@ print(area)
       </section>
 
       <!-- OUTRO -->
-      <section>
         <section>
             <h3>Questions?</h3>
         </section>
@@ -457,20 +445,10 @@ print(area)
           </code></pre></div>
         </section>
 
-        <section>
-          <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
-          <div class="box--small">
-            <h3><span class="green">Intro to Python</span></h3>
-            <p><small>Jeanette Head &nbsp; | &nbsp; @JeanetteHead17 &nbsp; | &nbsp; @gdiannarbor  &nbsp; | &nbsp; #GDIA2 &nbsp; | &nbsp; #IntroToPython</small></p>
-          </div>
-        </section>
-
-      </section>
     </div>
 
     <footer>
       <div class="copyright">
-        @gdiannarbor  &nbsp; | &nbsp; #GDIA2 &nbsp; | &nbsp; #IntroToPython &nbsp;
         <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
       </div>
     </footer>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Introduction to Python | Girl Develop It Ann Arbor</title>
+  <title>Introduction to Python | Girl Develop It Class 3</title>
 
     <meta name="description" content="This is the official Girl Develop It Core Intro to Python course. The course is meant to be taught in four two-hour sessions. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
 
@@ -14,7 +14,7 @@
 
   <link rel="stylesheet" href="css/reveal.min.css">
   <link rel="stylesheet" href="css/theme/gdiaa.css" id="theme">
-  <link rel="stylesheet" href="lib/css/rainbow.css">
+  <link rel="stylesheet" href="lib/css/light.css">
   <link rel="stylesheet" href="css/print/pdf.css" media="print">
 
   <script src="lib/js/head.min.js"></script>
@@ -27,14 +27,11 @@
   <div class="reveal">
     <!-- Any section element inside of this container is displayed as a slide -->
     <div class="slides">
-      <!-- INTRO -->
-      <section>
         <!-- Opening slide -->
         <section>
           <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
           <div class="box--small">
-            <h3><span class="green">Intro to Python</span><br/><small><span class="blue">Day 3</span></small></h3>
-            <p><small>Jeanette Head &nbsp; | &nbsp; @JeanetteHead17 &nbsp; | &nbsp; @gdiannarbor  &nbsp; | &nbsp; #GDIA2 &nbsp; | &nbsp; #IntroToPython</small></p>
+            <h3><span class="green">Intro to Python Class 3</span></h3>
           </div>
         </section>
 
@@ -57,10 +54,8 @@
                 <li class="fragment">Python builtin functions</li>
             </ul>
         </section>
-      </section>
 
       <!-- FUNCTIONS -->
-      <section>
         <section>
             <h3>More with Functions</h3>
             <p class="copy--small box--small">Functions can also call other functions.</p>
@@ -114,9 +109,7 @@ print_hypotenuse(1,2,3,4)
 #     f(y)
             </code></pre></div>
         </section>
-      </section>
-
-      <section>
+ 
         <section>
             <h3>Remember</h3>
             <p class="copy--small box"><strong>Functions</strong> are called by their name - <code>my_function()</code></p>
@@ -151,10 +144,9 @@ help(name.upper)
             <p class="copy--small box--small"><strong>Hint:</strong> Use <code>help()</code> on a method.<br/><small>It will tell you the arguments to use and the expected behavior</small></p>
             <p class="copy--small box--small"><strong>Hint:</strong> Don't be afraid of errors.<br/><small>They seem to be in a foreign language but they are there to help you.<br/><i>Read them carefully.</i></small></p>
         </section>
-      </section>
+
 
       <!-- LISTS : 30 minutes -->
-      <section>
         <section>
             <h3>Lists</h3>
             <p class="copy--small box--small">A list is an ordered collection of elements</p>
@@ -229,9 +221,7 @@ print(to_dos[len(to_dos) - 1])
             </code></pre>
             <p class="box--small copy--xsmall fragment">An IndexError results if an index exceeds the length of the list minus 1</p>
         </section>
-      </section>
 
-      <section>
         <section>
             <h3>Dictionaries</h3>
             <p class="box--small copy--small">A <strong>dictionary</strong> (sometimes called a "hashmap") is a collection of key/value pairs, defined with <code>{}</code></p>
@@ -330,10 +320,43 @@ answer = is_word_in_file(input_word, 'pride.txt')
             <p class="copy--xsmall box--small">I have used <a href="http://www.gdiannarbor.com/events/intro-python/examples/pride.txt">Pride and Prejudice</a> from Project Gutenburg with my example code.</p>
             <p class="copy--xsmall">You can click this link and copy/paste the text into a new text file<br/>called 'pride.txt' and save it in the same folder as your code</p>
         </section>
-      </section>
+
 
       <!-- Block 3 20 minutes -->
-      <section>
+        <section>
+            <h3>TUPLES</h3>
+            <p class="copy--small">Tuples are like lists, but they are immutable. They are particularly good at storing collections of a fixed and predictable size. Use () to define tuples</p>
+            <p class="copy--small">An x, y coordinate pair, or the RGB values of a color are good candidates for tuples.</p>
+            <pre><code contenteditable class="small python">
+point = (0, 1)
+x = point_a[0]
+y = point_a[1]
+
+# or, even better
+
+point = (0, 1)
+x, y = point_a
+# x is 0, y is 1
+            </code></pre>
+        </section>
+
+        <section>
+            <h3>SETS</h3>
+            <p class="copy--small">Sets are unordered collections whose elements are unique. Therefore, adding a value to a set that already has it, does nothing.</p>
+            <p class="copy--small">Sets can be created with comma separated elements enclosed in {} in Python 2.7 or greater. Very often, one will make a list and use the set() function</p>
+            <p class="copy--small">Sets have an add method, which like append for lists, adds an element to a set.</p>
+            <pre><code class="python">
+>>> set_a = set([0, 3, 7])
+>>> set_b = set([0, 4, 7])
+>>> set_a.add(4)
+>>> print(set_a)
+set([0, 3, 4, 7])
+>>> print(set_a.intersection(set_b))
+set([0, 4, 7])
+            </code> </pre>
+            <p class="copy--small">Sets have nice methods for reasoning about their relationship to other sets. (Think Venn Diagram)</p>
+        </section>
+
         <section>
             <h3>Lists of ... Lists</h3>
             <p class="copy--small box--small">Lists can contain not only numbers or strings, but also other lists.</p>
@@ -436,9 +459,7 @@ all_tweets = [
 ]
             </code></pre></div>
         </section>
-      </section>
 
-      <section>
         <section>
             <h3>Builtins for collections</h3>
             <p class="copy--small box--small">Python provides several functions that<br/>help us work with these collections.</p>
@@ -539,9 +560,7 @@ answer = is_word_in_file(input_word, 'pride.txt')
 # Display the answer in some meaningful way
             </code></pre>
         </section>
-      </section>
 
-      <section>
         <section>
             <h3>Questions?</h3>
         </section>
@@ -553,20 +572,10 @@ answer = is_word_in_file(input_word, 'pride.txt')
 
         </section>
 
-        <section>
-          <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
-          <div class="box--small">
-            <h3><span class="green">Intro to Python</span></h3>
-            <p><small>Jeanette Head &nbsp; | &nbsp; @JeanetteHead17 &nbsp; | &nbsp; @gdiannarbor  &nbsp; | &nbsp; #GDIA2 &nbsp; | &nbsp; #IntroToPython</small></p>
-          </div>
-        </section>
-      </section>
-
     </div>
 
     <footer>
       <div class="copyright">
-        @gdiannarbor  &nbsp; | &nbsp; #GDIA2 &nbsp; | &nbsp; #IntroToPython &nbsp;
         <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
       </div>
     </footer>
