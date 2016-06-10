@@ -96,7 +96,7 @@
         <ul class="list--tall copy--small box--small">
           <li class ="fragment">System Administration (Fabric, Salt, Ansible)</li>
           <li class ="fragment">3D animation and image editing (Maya, Blender, Gimp)</li>
-          <li class ="fragment">Scientific computing (numpy, scipy)</li>
+          <li class ="fragment">Data Science (numpy, scipy)</li>
           <li class ="fragment">Web development (Django, Flask)</li>
           <li class ="fragment">Game Development (Civilization 4, EVE Online)</li>
         </ul>
@@ -107,7 +107,7 @@
         <ul class="list--tall copy--small box--small">
           <li>Disney</li>
           <li>Dropbox</li>
-          <li>Canonical and Red Hat</li>
+          <li>Buzzfeed</li>
           <li>Google</li>
           <li>NASA</li>
         </ul>
@@ -120,9 +120,8 @@
           <ul class="list--xtall box--small copy--small">
               <li class="fragment">Teaching the computer to do a task</li>
               <li class="fragment">A program is made of one or more files of code, each of which solve part of the overall task.</li>
-              <li class="fragment">The code that you program is human readable but also needs to exist in a form that the computer can run directly. This form is not human readable.</li>
+              <li class="fragment">The code that you program is human readable but translates into a form that the computer can understand and run.</li>
               <li class="fragment">Don't focus on what's "under the hood" for now. We will "drive the car" first.</li>
-              <li class="fragment">In other words, there are many layers to the onion. We start at one layer and slowly move toward layers that are beneath or above us.</li>
           </ul>
       </section>
 
@@ -184,7 +183,7 @@
                   <br/><code class="copy--xsmall">[Environment]::SetEnvironmentVariable("Path", "$env:Path;C:\Python34", "User")</code>
               </li>
               <li>
-                  Locate and run the terminal program. Type <code>python</code> and hit enter.
+                  Locate and run the terminal program. 
               </li>
               <li>
                   More setup instructions are available:
@@ -322,7 +321,8 @@ b = 10
       <section>
           <h3>Let's Develop It</h3>
           <p class="box copy--small">We'll practice what we've learned in the shell.</p>
-          <p class="box copy--small">Review the slides on your computer and practice entering any commands you didn't fully understand before.</p>
+          <p class="box copy--small">Practice commands you didn't fully understand before.</p>
+          <p class="box copy--small">Play with strings, arithmetic, variables, type.</p>
           <p class="box copy--small">Ask the teacher, TAs, and students around you for help!</p>
       </section>
 
@@ -330,7 +330,6 @@ b = 10
       <!-- DEV ENV SETUP : 30 Minutes -->
         <section>
             <h3>Using the Terminal</h3>
-            <p class="copy--small box--small">Try each of the following commands in turn:</p>
             <table class="copy--xsmall" style='line-height: 1.5'>
                 <tr>
                     <th style="width: 160px;"><strong>Command</strong></th>
@@ -351,11 +350,6 @@ b = 10
                     <td><code>cd</code></td>
                     <td>Change directory</td>
                     <td style="padding-bottom: 20px">Change to another folder. Takes the folder name as an argument. 'cd ..' goes up a directory</td>
-                </tr>
-                <tr>
-                    <td><code>cat</code></td>
-                    <td>Concatenate</td>
-                    <td style="padding-bottom: 20px">Prints the contents of a file. Takes a filename as an argument</td>
                 </tr>
             </table>
         </section>
@@ -387,13 +381,13 @@ $ pwd
                 <li class="fragment">Click "File", then "Open". Navigate to the <code>gdi-intro-python</code> <strong>folder</strong> we just created and click "Open"</li>
                 <li class="fragment">In the text editor, enter the following:
             <pre><code contenteditable class="python" style="min-height: 50px;">
-print('I am a Python program!')
+print('Hello World!')
             </code></pre>
                 </li>
                 <li class="fragment">Click "File", then "Save As...". Type "class1.py" and click "Save".</li>
                 <li class="fragment">Open a terminal and navigate to the <code>gdi-intro-python</code> folder.<br/><small>If you don't already have this folder open in a terminal.</small></li>
                 <li class="fragment">Type <code>python class1.py</code></li>
-                <li class="fragment">You should see the terminal print "I am a Python program!"</li>
+                <li class="fragment">You should see the terminal print "Hello World!"</li>
             </ul>
         </section>
 
@@ -402,6 +396,7 @@ print('I am a Python program!')
             <p class="copy--small box--small">To obtain user input, use <code>input()</code></p>
             <p class="copy--small box--small">Change the class1.py text to the following and run it again</p>
             <pre><code contenteditable class="python" style="min-height: 50px;">
+# Calculating the radius of a circle. The equation is a=pi*r^2
 input_value = input("Enter a radius:")
 radius = float(input_value)
 area = 3.14159 * radius * radius
