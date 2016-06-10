@@ -311,7 +311,8 @@ def is_word_in_file(word, filename):
     for line in generate_cleaned_lines(filename):
         # line will be a string of each line of the file in order
         # Your code goes here.
-        # Your code should do something with the word and line variables and assign the value to a variable for returning
+        # Your code should do something with the word and line variables 
+        # and assign the value to a variable for returning
 
 input_word = input("Enter a word to search for:")
 answer = is_word_in_file(input_word, 'pride.txt')
@@ -507,14 +508,14 @@ print(grades)
         </section>
 
         <section>
-            <h3>Builtins Examples continued</h3>
+            <h3>String Formatting Operators</h3>
             <pre><code contenteditable class="python">
 # enumerate() - Obtain the index of the element in the loop
 
 print('To Do:')
 to_dos = ['work', 'sleep', 'work']
 for index, item in enumerate(to_dos):
-    print('{0}. {1}'.format(index + 1, item))
+    print('%s, %s) %(index + 1, item))
 
 print(list(enumerate(to_dos)))
 
