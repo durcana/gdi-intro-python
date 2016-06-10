@@ -46,7 +46,7 @@
         </section>
 
         <section>
-            <h3>What we will cover today</h3>
+            <h3>What we will cover the rest of today</h3>
             <ul span class="box--small list--xtall">
                 <li class ="fragment">Boolean Expressions and Conditionals</li>
                 <li class ="fragment">Loops</li>
@@ -260,8 +260,7 @@ for number in numbers:
                     <h3>For loops continued</h3>
                     <p class="copy--small box--small">Let's examine the example carefully</p>
                     <pre><code contenteditable class="small python">
-numbers = [1, 3, 8]
-for number in numbers:
+for number in range(5):
     print("The current number is:")
     print(number)
                     </code></pre>
@@ -288,7 +287,7 @@ for number in numbers:
         <section>
             <h3>Functions</h3>
             <p class="copy--small box--small">A named section of code that performs a specific task</p>
-            <p class="copy--small box--small fragment">When one uses a function, one makes a function <strong>call</strong></p>
+            <p class="copy--small box--small fragment">This is also referred to as <strong>calling</strong> a function</p>
             <div class="fragment"><p class="copy--small box--small ">We have already made a function call<br/>when using the <code>type</code>, <code>int</code>, or <code>float</code> functions</p>
             <pre><code contenteditable class=" python small">
 a = '3'
@@ -315,11 +314,11 @@ str(32)
         </section>
 
         <section>
-            <h3>Function definition</h3>
+            <h3>Creating a Function</h3>
             <p class="copy--small box--small">The following example is a <strong>function definition</strong>.<br/>This allows us to create our own functions</p>
             <pre><code contenteditable class="small python">
 def print_plus_5(x):
-print(x + 5)
+    print(x + 5)
             </code></pre>
             <p class="copy--small box--small fragment">The function definition has the following parts</p>
             <ul class="copy--xsmall box--small list--tall">
@@ -352,11 +351,10 @@ y = plus_5(4)
             <h3>Functions with no arguments</h3>
             <p class="copy--small box--small">A function does not have to take arguments,<br/>as in the following example:
             <pre><code contenteditable class="small python">
-def newline():
-print('')
+def grass():
+print('The grass is green.')
 
-newline()
-# prints an empty line. Nothing is returned
+grass()
             </code></pre>
             <p class="copy--xsmall box--small ">This is useful when the function does some work but doesn't need any parameters.<br/>i.e. The function is intended to always do the same thing</p>
         </section>
@@ -377,7 +375,7 @@ area = find_rectangle_area(3, 4)
             <h3>Import statements</h3>
             <p class="copy--small box--small">The <strong>import</strong> statement allows us to use Python code that is defined in one file in a different file</p>
             <p class="copy--small box--small fragment">Import statements can be used to import various specialized libraries - such as scikit or nympy - into our code</p>
-            <p class="copy--small box--small fragment"><strong>def library:</strong> A published collection of useful functions for doing a specific type of coding.  There are math, statistics, data science, and graphics libraries, to name a few types.</p>
+            <p class="copy--small box--small fragment">A <strong>library</strong> is a published collection of useful functions for doing a specific type of coding.  There are math, statistics, data science, and graphics libraries, to name a few types.</p>
             <p class="copy--small box--small fragment">The <strong>from</strong> keyword allows us to only import parts of a Python file</p>
             <div class="fragment "><pre><code contenteditable class="python" style="min-height: 50px;">
 from math import sqrt
@@ -483,7 +481,8 @@ hello is a &ltclass string&gt
           <p>Do this excercise from Learn Python The Hard Way</p>
           <i>Make sure to do these problems by hand, not with python! </i>
 
-          <h6><a href="https://lpthw.readthedocs.org/en/latest/ex28/">https://lpthw.readthedocs.org/en/latest/ex28/</a></h6>
+          <h6><a
+                          href="http://learnpythonthehardway.org/book/ex28.html">http://learnpythonthehardway.org/book/ex28.html</a></h6>
         </section>
     </div>
 
