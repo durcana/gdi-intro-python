@@ -67,7 +67,7 @@
         </section>
 
         <section>
-          <h3>What we will cover today</h3>
+          <h3>What we will cover this morning</h3>
           <ul class="list--xtall box--small copy--small">
             <li class ="fragment">Why Python?</li>
             <li class ="fragment">What is programming?</li>
@@ -86,8 +86,8 @@
           <li class ="fragment">Suitable for beginners, yet used by professionals</li>
           <li class ="fragment">Readable, maintainable code</li>
           <li class ="fragment">Rapid rate of development</li>
-          <li class ="fragment">Few "magical" side-effects</li>
           <li class ="fragment">Variety of applications</li>
+          <li class="fragment">Huge, welcoming community</li>
         </ul>
       </section>
 
@@ -175,7 +175,7 @@
                   <a href="http://www.sublimetext.com/3" target="_blank">Install Sublime Text 3</a> - A text editor
               </li>
               <li>
-                  <a href="http://www.python.org/download/" target="_blank">Install Python 3</a>
+                  <a href="http://www.python.org/download/" target="_blank">Install Python 2.7</a>
                   <br/><small>(This step is for Windows users only. GNU/Linux and Mac OS X come with Python installed!)</small>
               </li>
               <li>
@@ -213,14 +213,14 @@
             <div class='box--small'><pre><code contenteditable class="python" style="min-height: 50px;">
 a = 2
 b = 3
-print(a + b)
+print a + b
 c = a + b
-print(c * 2)
+print c * 2
             </code></pre></div>
             <div class='box--small'><pre><code contenteditable class="python" style="min-height: 50px;">
 a = 0
 a = a + .5
-print(a)
+print a
             </code></pre></div>
         </section>
 
@@ -230,18 +230,18 @@ print(a)
 a = 'Hello '
 b = 'World'
 c = a + b
-print(c)
+print c
             </code></pre></div>
             <div class="box--small"><pre><code contenteditable class="python" style="min-height: 50px;">
 a = "Spam "
 b = a * 4
-print(b)
+print b
             </code></pre></div>
             <div class="box--small"><pre><code contenteditable class="python" style="min-height: 50px;">
 a = 'spam '
 b = 'eggs'
 c = a * 4 + b
-print(c)
+print c
             </code></pre></div>
         </section>
 
@@ -256,14 +256,14 @@ print(c)
               <li class="fragment"><code>type()</code> is a <strong>function</strong>. We <em>call</em> it by using parenthesis and pass it an object by placing the object inside the parenthesis
             <pre><code contenteditable class="python" style="min-height: 50px;">
 a = 4
-print(type(a))
-print(type(4))
+print type(a)
+print type(4)
 
-print(type(3.14))
+print type(3.14)
 
 b = 'spam, again'
-print(type(b))
-print(type("But I don't like spam"))
+print type(b)
+print type("But I don't like spam")
             </code></pre>
 
               </li>
@@ -307,7 +307,7 @@ TypeError: unsupported operand type(s) for /: 'str' and 'str'
 
 # NameError - Using a name that hasn't been defined yet
 a = 5
-print(b)
+print b
 b = 10
 
 # TypeError - Using an object in a way that its type does not support
@@ -376,12 +376,12 @@ $ pwd
 
         <section>
             <h3>The Text Editor</h3>
-            <p class="copy--small box--small">Open sublime text.</p>
             <ul class="list--tall copy--small box--small">
+                <li class="fragment">Open sublime text.</li>
                 <li class="fragment">Click "File", then "Open". Navigate to the <code>gdi-intro-python</code> <strong>folder</strong> we just created and click "Open"</li>
                 <li class="fragment">In the text editor, enter the following:
             <pre><code contenteditable class="python" style="min-height: 50px;">
-print('Hello World!')
+print 'Hello World!'
             </code></pre>
                 </li>
                 <li class="fragment">Click "File", then "Save As...". Type "class1.py" and click "Save".</li>
@@ -393,15 +393,15 @@ print('Hello World!')
 
         <section>
             <h3>User Input</h3>
-            <p class="copy--small box--small">To obtain user input, use <code>input()</code></p>
+            <p class="copy--small box--small">To obtain user input, use <code>raw_input()</code></p>
             <p class="copy--small box--small">Change the class1.py text to the following and run it again</p>
             <pre><code contenteditable class="python" style="min-height: 50px;">
 # Calculating the radius of a circle. The equation is a=pi*r^2
-input_value = input("Enter a radius:")
+input_value = raw_input("Enter a radius:")
 radius = float(input_value)
 area = 3.14159 * radius * radius
-print("The area of a circle with radius " + input_value + " is:")
-print(area)
+print "The area of a circle with radius " + input_value + " is:"
+print area
             </code></pre>
             <p class="copy--small box--small">The user's input is a string, so we use <code>float()</code> to make it a number</p>
         </section>
@@ -409,7 +409,7 @@ print(area)
       <!-- Let's develop it: 15 minutes -->
       <section>
           <h3>Let's Develop It!</h3>
-          <p class="copy--small box">Write your own program that uses input<br/>and does something else with the value</p>
+          <p class="copy--small box">Write your own program that uses raw_input<br/>and does something else with the value</p>
           <p class="copy--xsmall box">You can use float() to treat the input as a number if you need a number,<br/>or use the input directly as a string.</p>
       </section>
 
@@ -419,7 +419,7 @@ print(area)
         </section>
 
         <section>
-          <h3>Homework</h3>
+          <h3>Exercises</h3>
           <p class="copy--small box">Write a program that could replace the initial conversation you have at the checkout line.  It should do the following:</p>
           <div class='box--small'>
             <pre><code contenteditable class="python" style="min-height: 50px;">

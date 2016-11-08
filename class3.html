@@ -39,54 +39,131 @@
         <section>
             <h3>Review</h3>
             <ul class="list--xtall copy--small box">
-                <li>Functions - calls, definitions, returns, arguments</li>
+                <li>Lists - appending, indexing</li>
                 <li>Conditions - if, elif, else</li>
                 <li>Loops - while, for</li>
             </ul>
         </section>
 
         <section>
-            <h3>What we will cover today</h3>
+            <h3>What we will cover this morning</h3>
             <ul class="list--xtall copy--small box">
-                <li class="fragment">More Functions</li>
+                <li class="fragment">Functions</li>
                 <li class="fragment">Method calls</li>
-                <li class="fragment">Lists and dictionaries</li>
+                <li class="fragment">Dictionaries</li>
                 <li class="fragment">Python builtin functions</li>
             </ul>
         </section>
 
       <!-- FUNCTIONS -->
+
         <section>
-            <h3>More with Functions</h3>
-            <p class="copy--small box--small">Functions can also call other functions.</p>
-            <p class="copy--small box--small fragment">You can use this to break up tasks<br/>into small pieces that rely on others to do their work.</p>
-            <div class="fragment">
-            <pre><code contenteditable class=" python">from math import sqrt
-
-def absolute_difference(value_a, value_b):
-    return abs(value_a - value_b)
-
-def get_hypotenuse(a, b):
-    return sqrt(a ** 2 + b ** 2)
-
-def get_area_rectangle(width, height):
-    return width * height
-
-def print_area_and_hypotenuse(x1, y1, x2, y2):
-    width = absolute_difference(x1, x2)
-    height = absolute_difference(y1, y2)
-    area = get_area_rectangle(width, height)
-    hypotenuse = get_hypotenuse(width, height)
-    print('Area of the rectangle is:')
-    print(area)
-    print('The diagonal of the rectangle is:')
-    print(hypotenuse)
-            </code></pre>
-          </div>
+            <h3>Functions</h3>
+            <p class="copy--small box--small">A named section of code that performs a specific task</p>
+            <p class="copy--small box--small fragment">This is also referred to as <strong>calling</strong> a function</p>
+            <div class="fragment"><p class="copy--small box--small ">We have already made a function call<br/>when using the <code>type</code>, <code>int</code>, or <code>float</code> functions</p>
+            <pre><code contenteditable class=" python small">
+a = '3'
+print type(a)
+a = float(a)
+            </code></pre></div>
         </section>
 
         <section>
+            <h3>Function calls</h3>
+            <pre><code contenteditable class="small python">
+a = 3
+print type(a)
+            </code></pre>
+            <p class="copy--small box--small">A function can take <strong>arguments</strong></p>
+            <p class="copy--small box--small">In the example above, the variable <code>a</code> is passed<br/>as an argument to the function <code>type</code></p>
+            <p class="copy--small box--small fragment">Arguments can also be called <strong>parameters</strong></p>
+            <div class="fragment "><pre><code contenteditable class="python" style="min-height: 50px;">
+# Some more function call examples
+
+int('32')
+str(32)
+            </code></pre></div>
+        </section>
+
+        <section>
+            <h3>Creating a Function</h3>
+            <p class="copy--small box--small">The following example is a <strong>function definition</strong>.<br/>This allows us to create our own functions</p>
+            <pre><code contenteditable class="small python">
+def print_plus_5(x):
+    print x + 5
+            </code></pre>
+            <p class="copy--small box--small fragment">The function definition has the following parts</p>
+            <ul class="copy--xsmall box--small list--tall">
+                <li class="fragment">The <code>def</code> keyword signifies we are defining a function</li>
+                <li class="fragment">The name of the function being defined - <code>print_plus_5</code></li>
+                <li class="fragment">The arguments in parentheses - <code>x</code></li>
+                <li class="fragment">The function <strong>body</strong>, which is a block of indented code that executes when the function is called. - <code>print x + 5</code></li>
+            </ul>
+        </section>
+
+
+        <section>
+            <h3>Function returns</h3>
+            <p class="copy--small box--small">A function can also <strong>return</strong> a value</p>
+            <div class="copy--small box--small fragment"><p>To do this, one uses the <strong>return</strong> keyword</p>
+            <pre><code contenteditable class=" small python">
+def plus_5(x):
+    return x + 5
+
+y = plus_5(4)
+print y
+            </code></pre></div>
+            <ul class="list--tall copy--xsmall">
+                <li class="fragment">This allows us to call a function to obtain a value for later use.<br/>(Not the same as printing the value)</li>
+                <li class="fragment">In this example, the function call <code>plus_5(4)</code> evaluates to 9, and <code>y</code> is set to this value</li>
+                <li class="fragment">To determine what a function will return, use the <strong>substitution method</strong>.</li>
+                <li class="fragment">If return is not used, the function returns <strong>None</strong></li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Functions with no arguments</h3>
+            <p class="copy--small box--small">A function does not have to take arguments,<br/>as in the following example:
+            <pre><code contenteditable class="small python">
+def grass():
+    print 'The grass is green.'
+
+grass()
+            </code></pre>
+            <p class="copy--xsmall box--small ">This is useful when the function does some work but doesn't need any parameters.<br/>i.e. The function is intended to always do the same thing</p>
+        </section>
+
+        <section>
+            <h4>Functions with more than one argument</h4>
+            <p class="copy--small box--small">A function can also take more than one argument separated by commas. For example:</p>
+            <pre><code contenteditable class="small python">
+def find_rectangle_area(width, height):
+    return width * height
+
+area = find_rectangle_area(3, 4)
+print area
+            </code></pre>
+        </section>
+
+
+        <section>
+          <h3>Let's Develop It</h3>
+
+          <p class="copy--small box--small">Pick one of the following exercises</p>
+
+          <ul>
+            <li><p>Write a function that a bar could use to check to see if a customer is of drinking age. <pre>isOfDrinkingAge(age)</pre></p></li>
+            <li><p>If it is a saturday in spring and it is above 65 degrees, Kermit plants flowers. Write a function to check whether he will plant flowers today. <pre>willKermitPlantFlowers(dayOfWeek, season, currentTemperature)</pre></p></li>
+            <li><p>Zach knows something is wrong with his basement if the temperature is below 50 or the humidity is above 70%. Write a function that can check whether his basement has a problem. <pre>basementIsOk(temperature, humidity)</pre></p></li>
+          </ul>
+        </section>
+
+
+        <section>
             <h3>Function Composition</h3>
+            <p class="copy--small box--small">Functions can also call other functions.</p>
+            <p class="copy--small box--small fragment">You can use this to break up tasks<br/>into small pieces that rely on others to do their work.</p>
             <p class="copy--small box--small"><strong>Function composition</strong> is when the <span class="blue">output</span><br/>of one function <span class="green">acts as the input</span> of another</p>
             <div class="fragment">
               <pre><code contenteditable class=" python">from math import sqrt
@@ -98,8 +175,8 @@ def get_hypotenuse(a, b):
     return sqrt(a ** 2 + b ** 2)
 
 def print_hypotenuse(x1, y1, x2, y2):
-    print('The diagonal of the rectangle is:')
-    print(get_hypotenuse(find_distance(x1, x2), find_distance(y1, y2)))
+    print 'The diagonal of the rectangle is:'
+    print get_hypotenuse(find_distance(x1, x2), find_distance(y1, y2))
 
 print_hypotenuse(1,2,3,4)
 
@@ -116,20 +193,35 @@ print_hypotenuse(1,2,3,4)
             <p class="copy--small box">They can be passed data in the form of parameters - <code>my_function(my_parameter)</code></p>
             <p class="copy--small box">They usually return some sort of value. This all happens explicitly.</p>
         </section>
+
+</section>
+
+        <!-- Let's develop it: 15 minutes -->
+        <section>
+            <h3>Let's Develop It</h3>
+            <ul class="list--xtall copy--small box--small">
+                <li>Write a program that uses at least one function to solve a geometry problem</li>
+                <li>Hint: You might use a loop that obtains user input, does the calculation, then prints the answer. As before, the user should be able to quit by entering "quit"</li>
+                <li>Hint: You can import your function in the shell and call it with different parameters to test it out</li>
+                <li>Hint: Download <a href="http://nicklang.com/gdi-intro-python/examples/geometry.py">geometry.py</a> and use it as an example</li>
+            </ul>
+        </section>
+
+
         <section>
           <h3>Method Calls</h3>
             <p class="copy--small box"><strong>Methods</strong> are also called by name but are associated with an object.<br/><small>Really, they are identical to functions except that the data passed into it is passed implicitly.</small></p>
             <p class="copy--xsmall box fragment">For example, the integers and strings we've been using have methods attached to them.</p>
             <p class="copy--xsmall box fragment">We can use the <code>dir()</code> function to see the methods of an object<br/>and <code>help()</code> to see what they do.</p>
             <div class="fragment"><pre><code contenteditable class=" small python">a = 4
-print(dir(a))
+print dir(a)
 
 name = 'caleb'
 sentence = 'the quick brown fox did the thing with the thing'
-print(dir(name))
+print dir(name)
 
-print(name.capitalize())
-print(sentence.count('the'))
+print name.capitalize()
+print sentence.count('the')
 
 help(name.upper)
             </code></pre></div>
@@ -146,85 +238,9 @@ help(name.upper)
         </section>
 
 
-      <!-- LISTS : 30 minutes -->
-        <section>
-            <h3>Lists</h3>
-            <p class="copy--small box--small">A list is an ordered collection of elements</p>
-            <div class="fragment"><p class="copy--small box--small">In Python, a list is defined using <code>[ ]</code> with elements separated by commas, as in the following example</p>
-            <pre><code contenteditable class="small python">
-words = ['list', 'of', 'strings']
-            </code></pre>
-            </div>
-            <div class="fragment">
-            <p class="copy--small box--small">A list can, but doesn't have to be of all one type.<br/><small>A list of one type is <strong>homogenous</strong> as opposed to a list of multiple types, which is <strong>heterogeneous</strong>.</small></p>
-            <pre><code contenteditable class="small python">
-# heterogenous list
-words = [0, 'list', 'of', 3, 'strings', 'and', 'numbers']
-            </code></pre></div>
-        </section>
-
-        <section>
-            <h3>List Methods</h3>
-            <p class="copy--small box--small">Lists have several methods, the most useful of which is <code>append</code></p>
-            <div class="copy--small box--small">
-            <p class="copy--small box--small ">A list can be created as an empty list and have values added to it with <code>append</code></p>
-            <pre><code contenteditable class="small python">
-to_dos = []
-to_dos.append('buy soy milk')
-to_dos.append('install git')
-print(to_dos)
-            </code></pre></div>
-            <p class="copy--small box--small fragment">Therefore, lists are <strong>mutable</strong></p>
-            <p class="copy--small box--small fragment">This means that a list can change values<br/>during the duration of a program</p>
-        </section>
-
-        <section>
-            <h3>Iteration</h3>
-            <p class="copy--small box--small">Lists and many other collections are <strong>iterable</strong>.</p>
-            <div class="fragment"><p class="copy--small box--small">Once defined, we can iterate on them,<br/>performing an action with each element</p>
-            <pre><code contenteditable class="small python">
-shipping_cost = 2.5
-prices = [3, 4, 5.25]
-costs = []
-
-for price in prices:
-    costs.append(price + shipping_cost)
-
-for cost in costs:
-    print(cost)
-            </code></pre></div>
-        </section>
-
-        <section>
-            <h3>Indexing</h3>
-            <p class="copy--small box--small">An element can also be obtained from a list through <strong>indexing</strong></p>
-            <p class="copy--small box--small fragment">This allows us to obtain an element without iterating through the entire collection if we just want one value.</p>
-            <div class="fragment"><p class="copy--small box--small">To index on a collection, follow it immediately with <code>[index]</code>. (index here is a number, variable or expression)</p>
-            <pre><code contenteditable class="small python">
-numbers = [10, 20, 30]
-print(numbers[0])
-            </code></pre></div>
-        </section>
-
-        <section>
-            <h3>Indexing continued</h3>
-
-            <p class="box--small copy--small">Lists and other collections in Python are <strong>zero indexed</strong>.<br/><small>This means that the number 0 refers to first element in the list.</small></p>
-            <pre><code contenteditable class="small python">
-to_dos = [
-    'install git', 'read email', 'make lunch',
-]
-print(to_dos[0])
-print(to_dos[1])
-
-print(to_dos[len(to_dos) - 1])
-            </code></pre>
-            <p class="box--small copy--xsmall fragment">An IndexError results if an index exceeds the length of the list minus 1</p>
-        </section>
-
         <section>
             <h3>Dictionaries</h3>
-            <p class="box--small copy--small">A <strong>dictionary</strong> (sometimes called a "hashmap") is a collection of key/value pairs, defined with <code>{}</code></p>
+            <p class="box--small copy--small">A <strong>dictionary</strong> (sometimes called a "hashmap") is a data type of key/value pairs, defined with <code>{}</code></p>
             <pre><code contenteditable class="small python">
 menu_categories = {
     'food': 'stuff you eat',
@@ -262,212 +278,40 @@ menu = {
     'baguette': 3,
 }
 
-print(menu.keys())
-print(menu.values())
-print(menu.items())
-print(menu.get('pizza'))
-print(menu.get('water'))
-print(menu.get('juice', 5))
+print menu.keys()
+print menu.values()
+print menu.items()
+print menu.get('pizza')
+print menu.get('water')
+print menu.get('juice', 5)
             </code></pre>
             <p class=" box--small copy--small"><code>get</code> will return None if the key isn't present<br/>or a default value if provided.</p>
         </section>
 
         <section>
             <h3>The in operator</h3>
-            <p class="box--small copy--small">The <code>in</code> operator is used to determine if<br/>an element is in a given collection</p>
+            <p class="box--small copy--small">The <code>in</code> operator is used to determine if<br/>an element is in a given data type</p>
             <div class="fragment"><p class="box--small copy--small ">For dictionaries, the keys are searched for the element.</p>
             <pre><code contenteditable class="small python">
 color = [255, 255, 0]
 if 0 in color:
-    print('0 is in the color')
+    print '0 is in the color'
 
 menu = {'tofu': 4}
-print('tofu' in menu)
+print 'tofu' in menu
 
 names = ['Mary', 'Martha', 'George']
 george_present = 'George' in names
             </code></pre></div>
         </section>
 
-        <!-- Let's develop it: 15 minutes -->
         <section>
-            <h3>Let's Develop It</h3>
-            <p class="box copy--small">Write a program that opens a text file and does some processing.</p>
-            <ul class="list--xtall copy--xsmall">
-                <li>The program should take a word as input and determine if the word appears in the file</li>
-                <li>The program should use at least one function to do its work and you should be able to import this function in a Python shell and call it with a word and filename</li>
-                <li>Use the functions from <a href="http://www.gdiannarbor.com/events/intro-python/examples/helpers.py">helpers.py</a> to help with reading in the lines and/or words of the file</li>
-                <li>Download a book in plain text from <a href="http://www.gutenberg.org/wiki/Main_Page">Project Gutenburg</a> and put it into the same directory as your python file.</li>
-            </ul>
-            <p class="box copy--small">The next slide has some code and other<br/>resources that should help you get started</p>
-        </section>
-
-        <section>
-            <h3>Let's Develop It- Example Code</h3>
-            <pre><code contenteditable class="small python">
-from helpers import generate_cleaned_lines
-
-def is_word_in_file(word, filename):
-    for line in generate_cleaned_lines(filename):
-        # line will be a string of each line of the file in order
-        # Your code goes here.
-        # Your code should do something with the word and line variables 
-        # and assign the value to a variable for returning
-
-input_word = input("Enter a word to search for:")
-answer = is_word_in_file(input_word, 'pride.txt')
-# Display the answer in some meaningful way
-            </code></pre>
-            <p class="copy--xsmall box--small">I have used <a href="http://www.gdiannarbor.com/events/intro-python/examples/pride.txt">Pride and Prejudice</a> from Project Gutenburg with my example code.</p>
-            <p class="copy--xsmall">You can click this link and copy/paste the text into a new text file<br/>called 'pride.txt' and save it in the same folder as your code</p>
-        </section>
-
-
-      <!-- Block 3 20 minutes -->
-        <section>
-            <h3>TUPLES</h3>
-            <p class="copy--small">Tuples are like lists, but they are immutable. They are particularly good at storing collections of a fixed and predictable size. Use () to define tuples</p>
-            <p class="copy--small">An x, y coordinate pair, or the RGB values of a color are good candidates for tuples.</p>
-            <pre><code contenteditable class="small python">
-point = (0, 1)
-x = point_a[0]
-y = point_a[1]
-
-# or, even better
-
-point = (0, 1)
-x, y = point_a
-# x is 0, y is 1
-            </code></pre>
-        </section>
-
-        <section>
-            <h3>SETS</h3>
-            <p class="copy--small">Sets are unordered collections whose elements are unique. Therefore, adding a value to a set that already has it, does nothing.</p>
-            <p class="copy--small">Sets can be created with comma separated elements enclosed in {} in Python 2.7 or greater. Very often, one will make a list and use the set() function</p>
-            <p class="copy--small">Sets have an add method, which like append for lists, adds an element to a set.</p>
-            <pre><code class="python">
->>> set_a = set([0, 3, 7])
->>> set_b = set([0, 4, 7])
->>> set_a.add(4)
->>> print(set_a)
-set([0, 3, 4, 7])
->>> print(set_a.intersection(set_b))
-set([0, 4, 7])
-            </code> </pre>
-            <p class="copy--small">Sets have nice methods for reasoning about their relationship to other sets. (Think Venn Diagram)</p>
-        </section>
-
-        <section>
-            <h3>Lists of ... Lists</h3>
-            <p class="copy--small box--small">Lists can contain not only numbers or strings, but also other lists.</p>
-            <p class="copy--small box--small fragment">Such a structure is said to be  <strong>nested</strong></p>
-            <div class="fragment"><p class="copy--small box--small">The following is a list of lists:</p>
-            <pre><code contenteditable class="small python">
-game_board = [
-    ['O', 'X', ' '],
-    [' ', 'X', ' '],
-    [' ', ' ', ' '],
-]
-            </code></pre></div>
-            <p class="copy--small box--small fragment">This can be indexed successively with <code>game_board[0][1]</code></p>
-        </section>
-        <section>
-            <h3>Nested Lists continued</h3>
-            <p class="copy--small box--small">A list can be appended to a list as well</p>
-            <pre><code contenteditable class="small python">
-mary_to_dos = ['eat', 'work', 'pick up laundry', 'care for baby', 'sleep']
-fran_to_dos = ['eat', 'work', 'call plumber', 'sleep']
-baby_to_dos = ['eat', 'sleep']
-
-all_to_dos = []
-all_to_dos.append(mary_to_dos)
-all_to_dos.append(fran_to_dos)
-all_to_dos.append(baby_to_dos)
-
-print(all_to_dos)
-
-for to_dos in all_to_dos:
-    for to_do in to_dos:
-        print(to_do)
-            </code></pre>
-            <p class="copy--small box--small fragment">What if we want to <strong>flatten</strong> the to do's?</p>
-            <p class="copy--small box--small fragment">What if we want the to do's to be unique?</p>
-        </section>
-
-        <section>
-            <h3>Lists of Dictionaries</h3>
-            <p class="copy--small box--small">One of the most common and useful nested data structures,<br/>is a list of dictionaries</p>
-            <pre><code contenteditable class="python">
-card_a = {
-    'suit': 'spades',
-    'number': 4,
-}
-
-card_b = {
-    'suit': 'hearts',
-    'number': 8,
-}
-
-hand = [card_a, card_b]
-
-print('The hand contains:')
-for card in hand:
-    print('A', card['number'], 'of', card['suit'])
-            </code></pre>
-        </section>
-
-        <section>
-            <h3>Dictionary of Lists</h3>
-            <p class="copy--small box--small">A dictionary can also contain values that are themselves<br/>other collections, such as lists.</p>
-            <div class="fragment"><p class="copy--xsmall box--small">Let's revisit the group of to do lists and find a better representation:</p>
-            <pre><code contenteditable class="small python">
-mary_to_dos = ['eat', 'work', 'pick up laundry', 'care for baby', 'sleep']
-fran_to_dos = ['eat', 'work', 'call plumber', 'sleep']
-baby_to_dos = ['eat', 'sleep']
-
-all_to_dos = {
-    'mary': mary_to_dos,
-    'fran': fran_to_dos,
-    'baby': baby_to_dos,
-}
-
-for name, to_dos in all_to_dos.items():
-    print(name, 'needs to: ', to_dos)
-
-# Changing this later can be accomplished with
-all_to_dos['baby'].append('cry')
-            </code></pre></div>
-            <p class="copy--xsmall box--small fragment">Now the to do lists can be indexed or modified by name</p>
-        </section>
-
-        <section>
-            <h3>Means of Combination</h3>
-            <p class="copy--small box--small">Lists, dictionaries, and other collections are all<br/>a means of combination.</p>
-            <p class="copy--small box--small fragment">They can be freely combined to create the<br/>data structure needed for a particular problem</p>
-            <div class="fragment"><p class="copy--xsmall box--small">Eg. A list of dictionaries with lists</p>
-            <pre><code contenteditable class="python">
-all_tweets = [
-    {
-        'author': 'mary',
-        'handle': '@hadalittlelamb',
-        'date': '2013-01-22',
-        'tweets': [
-            'at Loco Pops enjoying a Raspberry Sage popsicle',
-            'Learning Python is so much fun',
-        ],
-    },
-]
-            </code></pre></div>
-        </section>
-
-        <section>
-            <h3>Builtins for collections</h3>
-            <p class="copy--small box--small">Python provides several functions that<br/>help us work with these collections.</p>
+            <h3>Builtins for data types</h3>
+            <p class="copy--small box--small">Python provides several functions that<br/>help us work with these data types.</p>
             <table class="copy--xsmall">
                 <tr>
                     <td style="width: 200px;"><code>len()</code></td>
-                    <td>Given a collection, return its length</td>
+                    <td>Given a data type, return its length</td>
                 </tr>
                 <tr>
                     <td><code>range()</code></td>
@@ -475,7 +319,7 @@ all_tweets = [
                 </tr>
                 <tr>
                     <td><code>sorted()</code></td>
-                    <td>Given a collection, returns a sorted copy of that collection</td>
+                    <td>Given a data type, returns a sorted copy of that data type</td>
                 </tr>
                 <tr>
                     <td><code>enumerate()</code></td>
@@ -492,86 +336,58 @@ all_tweets = [
             <h3>Examples of using Builtins</h3>
             <pre><code contenteditable class="python">
 # Using len() - Determines length
-print(len([1, 2]))
+print len([1, 2])
+print len("Hello")
 
 # range() - Quickly creates a list of integers
-print(range(5))
-print(range(5, 10))
-print(range(0, 10, 2))
-print(range(9, -1, -1))
+print range(5)
+print range(5, 10)
+print range(0, 10, 2)
 
 # sorted() - Sort a given list
 grades = [93, 100, 60]
 grades = sorted(grades)
-print(grades)
+print grades
             </code></pre>
         </section>
 
         <section>
             <h3>String Formatting Operators</h3>
             <pre><code contenteditable class="python">
-# enumerate() - Obtain the index of the element in the loop
-
-print('To Do:')
+print 'To Do:'
 to_dos = ['work', 'sleep', 'work']
-for index, item in enumerate(to_dos):
-    print('%s, %s) %(index + 1, item))
-
-print(list(enumerate(to_dos)))
+for item in to_dos:
+    print '%s' %(item)
 
 # zip()
-widths = [10, 15, 20]
-heights = [5, 8, 12]
-for width, height in zip(widths, heights):
-    print('Area is {0}'.format(width * height))
+name = 'Sally'
+print 'Her name is {}'.format(name)
             </code></pre>
         </section>
 
-        <!-- Let's develop it: 25 minutes -->
         <section>
-            <h3>Let's Develop It</h3>
-            <p class="copy--small box">Write a program that expands on your previous one.<br/>If it is unfinished, feel free to finish the original exercise first.<br/>To expand on it, choose one of the following:</p>
-            <ul class="list--xtall copy--xsmall">
-                <li>Determine how many times the user provided word appears in the file and/or what lines it appears on</li>
-                <li>Change the program so that it counts the number of times each word occurs. E.g. A dictionary of all words in the file, whose values are a count of their occurrences</li>
-                <li>Use <a href="http://www.gdiannarbor.com/events/intro-python/examples/boilerplate.py">boilerplate.py</a> to help you improve the reusability of the program. (The comments in that file should explain the how and why)</li>
-            </ul>
-            <p class="copy--small box">Resources for this and the previous exercise<br/>are provided on the next slide for convenience</p>
+          <h3>Function Practice</h3>
+          <p class="copy--small box--small">Write a function to...</p>
+          <pre><code>
+# ...add 10 to any number
+# ...divide any number by 100
+# ...add any 2 numbers
+# ...subtract any 2 numbers
+# ...convert celsius to farenheight
+# ...convert farenheight to celsius
+# ...convert inches to centimeters
+# ...convert centimeters to inches
+# ...calculate sales tax for any given total amount
+# ...calculate the area of a triangle (1/2 base * height)
+# ...calculate the volume of a rectangular prism (length * width * height)
+          </code></pre>
         </section>
-
-        <section>
-            <h3>Resources</h3>
-            <ul class="list--tall copy--xsmall box">
-                <li>Helper functions are in <a href="http://www.gdiannarbor.com/events/intro-python/examples/helpers.py">helpers.py</a></li>
-                <li>Download a book in plain text from <a href="http://www.gutenberg.org/wiki/Main_Page">Project Gutenburg</a> and put it into the same directory as your python file.</li>
-                <li>You can use this link for <a href="http://www.gdiannarbor.com/events/intro-python/examples/pride.txt">Pride and Prejudice</a>. Click this link and copy/paste the text into a new text file called 'pride.txt' and save it in the same folder as your code</li>
-
-            </ul>
-            <pre><code contenteditable class="python">
-from helpers import generate_cleaned_lines
-
-def is_word_in_file(word, filename):
-    for line in generate_cleaned_lines(filename):
-        # line will be a string of each line of the file in order
-        # Your code goes here. Do something with the word and line variables
-    return result
-
-input_word = input("Enter a word to search for:")
-answer = is_word_in_file(input_word, 'pride.txt')
-# Display the answer in some meaningful way
-            </code></pre>
-        </section>
-
+        
         <section>
             <h3>Questions?</h3>
         </section>
 
-        <section>
-          <h3>Homework</h3>
-          <p>Expand on the searching for word in text problem.</p>
-          <p>Can you display the context (3 words before and after) of each occurance of that word?</p>
 
-        </section>
 
     </div>
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-html lang="en">
+<html lang="en">
 <head>
   <meta charset="utf-8">
 
@@ -40,11 +40,157 @@ html lang="en">
           <h3>Review</h3>
           <ul class="box list--xtall copy--small">
               <li>Method calls</li>
-              <li>Combining lists and dictionaries</li>
-              <li>Builtins for collections</li>
+              <li>Dictionaries</li>
+              <li>Functions</li>
           </ul>
       </section>
 
+      <section>
+        <h3>What we will cover for the rest of today</h3>
+        <ul class="list--xtall copy--small box">
+            <li class="fragment">More data types</li>
+            <li class="fragment">Combining data types</li>
+        </ul>
+        </section>
+
+        <section>
+            <h3>TUPLES</h3>
+            <p class="copy--small">Tuples are like lists, but they are immutable. They are particularly good at storing data types of a fixed and predictable size. Use () to define tuples</p>
+            <p class="copy--small">An x, y coordinate pair, or the RGB values of a color are good candidates for tuples.</p>
+            <pre><code contenteditable class="small python">
+point = (0, 1)
+x = point_a[0]
+y = point_a[1]
+
+# or, even better
+
+point = (0, 1)
+x, y = point_a
+# x is 0, y is 1
+            </code></pre>
+        </section>
+
+        <section>
+            <h3>SETS</h3>
+            <p class="copy--small">Sets are unordered data types whose elements are unique. Therefore, adding a value to a set that already has it, does nothing.</p>
+            <p class="copy--small">Sets can be created with comma separated elements enclosed in {} in Python 2.7 or greater. Very often, one will make a list and use the set() function to eliminate duplicates.</p>
+            <p class="copy--small">Sets have an add method, which like append for lists, adds an element to a set.</p>
+            <pre><code class="python">
+>>> list_a = [0, 3, 2, 0, 2, 7]
+>>> set_a = set(list_a)
+>>> print set_a
+set([0, 2, 3, 7])
+
+>>> set_b = {1, 2, 1, 3}
+>>> print set_b
+set([1, 2, 3])
+            </code> </pre>
+            <p class="copy--small">Sets have nice methods for reasoning about their relationship to other sets. (Think Venn Diagram)</p>
+        </section>
+
+        <section>
+            <h3>Lists of ... Lists</h3>
+            <p class="copy--small box--small">Lists can contain not only numbers or strings, but also other lists.</p>
+            <p class="copy--small box--small fragment">Such a structure is said to be  <strong>nested</strong></p>
+            <div class="fragment"><p class="copy--small box--small">The following is a list of lists:</p>
+            <pre><code contenteditable class="small python">
+game_board = [
+    ['O', 'X', ' '],
+    [' ', 'X', ' '],
+    [' ', ' ', ' '],
+]
+            </code></pre></div>
+            <p class="copy--small box--small fragment">This can be indexed successively with <code>game_board[0][1]</code></p>
+        </section>
+
+        <section>
+            <h3>Nested Lists continued</h3>
+            <p class="copy--small box--small">A list can be appended to a list as well</p>
+            <pre><code contenteditable class="small python">
+mary_shopping_list = ['apples', 'bananas', 'chicken', 'dog food', 'ice cream']
+fran_shopping_list = ['ice cream', 'beef', 'peppers', 'apples']
+bob_shopping_list = ['chicken', 'peppers']
+
+family_shopping_list = []
+family_shopping_list.append(mary_shopping_list)
+family_shopping_list.append(fran_shopping_list)
+family_shopping_list.append(bob_shopping_list)
+
+print family_shopping_list
+
+for shop_list in family_shopping_list:
+    for food_item in shop_list:
+        print food_item
+            </code></pre>
+            <p class="copy--small box--small fragment">What if we want to <strong>flatten</strong> the family shopping list?</p>
+            <p class="copy--small box--small fragment">What if we want the food items in the family shopping list to be unique?</p>
+        </section>
+
+        <section>
+            <h3>Lists of Dictionaries</h3>
+            <p class="copy--small box--small">One of the most common and useful nested data structures,<br/>is a list of dictionaries</p>
+            <pre><code contenteditable class="python">
+card_a = {
+    'suit': 'spades',
+    'number': 4,
+}
+
+card_b = {
+    'suit': 'hearts',
+    'number': 8,
+}
+
+hand = [card_a, card_b]
+
+print 'The hand contains:'
+for card in hand:
+    print 'A', card['number'], 'of', card['suit']
+            </code></pre>
+        </section>
+
+        <section>
+            <h3>Dictionary of Lists</h3>
+            <p class="copy--small box--small">A dictionary can also contain values that are themselves<br/>other data types, such as lists.</p>
+            <div class="fragment"><p class="copy--xsmall box--small">Let's revisit the group of to do lists and find a better representation:</p>
+            <pre><code contenteditable class="small python">
+mary_shopping_list = ['apples', 'bananas', 'chicken', 'dog food', 'ice cream']
+fran_shopping_list = ['ice cream', 'beef', 'peppers', 'apples']
+bob_shopping_list = ['chicken', 'peppers']
+
+family_shopping_list = {
+    'mary': mary_shopping_list,
+    'fran': fran_shopping_list,
+    'baby': bob_shopping_list,
+}
+
+for name, shop_list in family_shopping_list.items():
+    print name, 'needs to buy: ', shop_list
+
+# Changing this later can be accomplished with
+family_shopping_list['fran'].append('strawberries')
+            </code></pre></div>
+            <p class="copy--xsmall box--small fragment">Now the to do lists can be indexed or modified by name</p>
+        </section>
+
+        <section>
+            <h3>Means of Combination</h3>
+            <p class="copy--small box--small">Lists, dictionaries, and other data types are all<br/>a means of combination.</p>
+            <p class="copy--small box--small fragment">They can be freely combined to create the<br/>data structure needed for a particular problem</p>
+            <div class="fragment"><p class="copy--xsmall box--small">Eg. A list of dictionaries with lists</p>
+            <pre><code contenteditable class="python">
+all_tweets = [
+    {
+        'author': 'mary',
+        'handle': '@hadalittlelamb',
+        'date': '2013-01-22',
+        'tweets': [
+            'at Loco Pops enjoying a Raspberry Sage popsicle',
+            'Learning Python is so much fun',
+        ],
+    },
+]
+            </code></pre></div>
+        </section>
 
       <!-- Block 1  - Intro to Classes and OOP - 20 minutes -->
       <section>
@@ -69,33 +215,13 @@ def heal(character, amount):
                   </code></pre>
         </section>
 
-        <section>
-          <h3>Functional Python</h3>
-          <p class="box--small"><strong>Functional Programming</strong> is programming<br/><em>without assignment statements</em>.</p>
-          <p class=" copy--small box--small fragment">Purely functional code and languages exist, but it is more common to use functional alongside declarative programming.</p>
-          <p class="copy--small box--small fragment">Python is a not a purely functional language, but it can be used (and is commonly used) for functional programming.</p>
-          <p class="copy--small box--small fragment">There are four functions that are used for functional programming: Range, Filter, Map, and Reduce</p>
-        </section>
-
-        <section>
-          <h3>Range</h3>
-          <p class="fragment box--small copy--small">What do you think the following functions output?</p>
-          <pre><code contenteditable class="small fragment python">
-  range(5)
-          </code></pre>
-          <pre><code contenteditable class="small fragment python">
-  range(5, 10)
-          </code></pre>
-          <pre><code contenteditable class="small fragment python">
-  range(10, 20, 2)
-          </code></pre>
-          <pre><code contenteditable class="small fragment python">
-  range(20, 8, -2)
-          </code></pre>
-        </section>
+                 </section>
 
                 <section>
                     <h3>Functional Python: Map</h3>
+                    <p class="copy--small box--small">Python is a not a purely functional language, but it can be used (and is commonly used) for functional programming.</p>
+                    <p class="copy--small box--small">There are four functions that are used for functional programming: Range, Filter, Map, and Reduce</p>
+ 
                     <p class="copy--small box--small">One commonly used, higher order function<br/>(that is a Python builtin) is called <strong>map</strong></p>
                     <pre><code contenteditable class=" python">
 # Define any function
