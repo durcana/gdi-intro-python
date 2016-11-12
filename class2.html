@@ -66,11 +66,9 @@
 a = 5
 b = 5
 print a == b
-# Combine comparison and assignment
-c = a == b
-print c
-
-print 3 &lt; 5
+c = 3
+print a == c
+print c &lt; a
             </code></pre>
         </section>
 
@@ -137,10 +135,10 @@ words = [0, 'list', 'of', 3, 'strings', 'and', 'numbers']
             <div class="copy--small box--small">
             <p class="copy--small box--small ">A list can be created as an empty list and have values added to it with <code>append</code></p>
             <pre><code contenteditable class="small python">
-to_dos = []
-to_dos.append('buy soy milk')
-to_dos.append('install git')
-print to_dos
+to_do_list = []
+to_do_list.append('buy soy milk')
+to_do_list.append('learn python')
+print to_do_list
             </code></pre></div>
             <p class="copy--small box--small fragment">Therefore, lists are <strong>mutable</strong></p>
             <p class="copy--small box--small fragment">This means that a list can change values<br/>during the duration of a program</p>
@@ -149,8 +147,8 @@ print to_dos
         <section>
             <h3>Indexing</h3>
             <p class="copy--small box--small">An element can also be obtained from a list through <strong>indexing</strong></p>
-            <p class="copy--small box--small fragment">This allows us to obtain an element without iterating through the entire collection if we just want one value.</p>
-            <div class="fragment"><p class="copy--small box--small">To index on a list, follow it immediately with <code>[index]</code>. (index here is a number, variable or expression)</p>
+            <p class="copy--small box--small fragment">This allows us to obtain an element if we just want one specific value.</p>
+            <div class="fragment"><p class="copy--small box--small">To index on a list, follow it immediately with <code>[index]</code>.</p>
             <pre><code contenteditable class="small python">
 numbers = [10, 20, 30]
 print numbers[0]
@@ -163,13 +161,13 @@ print numbers[0]
 
             <p class="box--small copy--small">Lists and other data types in Python are <strong>zero indexed</strong>.<br/><small>This means that the number 0 refers to first element in the list.</small></p>
             <pre><code contenteditable class="small python">
-to_dos = [
-    'install git', 'read email', 'make lunch',
+to_do_list = [
+    'learn python', 'read email', 'make lunch',
 ]
-print to_dos[0]
-print to_dos[1]
+print to_do_list[0]
+print to_do_list[1]
 
-print to_dos[len(to_dos) - 1]
+print to_do_list[len(to_do_list) - 1]
             </code></pre>
             <p class="box--small copy--xsmall fragment">An IndexError results if an index exceeds the length of the list minus 1</p>
         </section>
@@ -202,20 +200,18 @@ else:
         <section>
             <h3>Indentation</h3>
             <p class="copy--small box--small">In Python, <strong>blocks</strong> <span class="green">begin when text is indented</span> and<br/><span class="red">ends when it returns to the previous indentation</span></p>
+            <p class="copy--small box--small fragment">Let's write a python file that practices indentation and conditionals</p>
             <div class="fragment">
-            <p class="copy--small box--small ">Let's look at the previous example again with a few minor changes and examine the meaning of its indentation</p>
+            <p class="copy--small box--small">Write this into your text editor and save the file as class2.py in your gdi-intro-python folder.
             <pre><code contenteditable class=" python">
-if x == 5:
-    print 'x is equal to 5'
-    x_is_5 = True
-    print 'Still in the x == 5 block'
+print "It's your birthday!"
+answer = raw_input("How old are you? ")
+age = int(answer)
+if answer &lt; 21:
+    print "You may not have a beer, but here's some juice!"
 else:
-    print 'x is not equal to 5'
-    x_is_5 = False
-    print 'Still in the else block of x == 5'
-print 'Outside of the if or else blocks.'
-print 'x_is_5:'
-print x_is_5
+    print "Here's some beer!"
+print "Happy birthday!"
             </code></pre></div>
         </section>
 
@@ -224,27 +220,37 @@ print x_is_5
             <p class="box--small copy--small">Conditionals can also be <strong>chained</strong></p>
             <div class="fragment"><p class="box--small copy--small ">Chained conditionals use <code>elif</code> as an additonal check after the preceeding <code>if</code> predicate was False. For example</p>
             <pre><code contenteditable class=" python small">
-if x > 5:
-    print 'x is greater than 5'
-elif x < 5:
-    print 'x is less than 5'
+if x &lt; 0:
+    print "x is negative"
+elif x &gt; 0:
+    print "x is positive"
 else:
-    print 'x is equal to 5'
+    print "x is 0"
             </code></pre></div>
         </section>
 
         <section>
             <h3>Nested conditionals</h3>
             <p class="box--small copy--small">Conditionals can also be <strong>nested</strong></p>
-            <div class="fragment"><p class="box--small copy--small">Nested conditionals occur inside of other conditionals and are indented over once more.</p><p class="box--small copy--small">When the code block is complete, they are unindented</p>
-                        <pre><code contenteditable class="small python">
-            if x > 5:
-                print 'x is greater than 5'
-                if x > 10:
-                    print '...it is also greater than 10'
-                print 'Done evaluating the x > 10 block'
-            print 'Done evaluating the x > 5 block'
-                        </code></pre></div>
+            <p class="box--small copy--small fragment">Nested conditionals occur inside of other conditionals, and are indented over once more. When the code block is complete you move back.</p>
+            <div class="fragment"><p class="box--small copy--small">Edit your python file to contain the following:</p>
+            <pre><code contenteditable class="small python">
+print "It's your birthday!"
+answer = raw_input("How old are you? ")
+age = int(answer)
+if answer &lt; 21:
+    print "You may not have a beer, but here's some juice!"
+else:
+    beers = raw_input("How many beers do you want?")
+    beers = int(beers)
+    if beers > 3:
+        print "Oops, you're drunk!"
+    elif beers > 1:
+        print "You got a little tipsy"
+    else:
+        print "Looks like you're the designated driver"
+print "Happy birthday!"
+            </code></pre></div>
         </section>
 
         <!-- Let's develop it: 10 minutes -->
@@ -278,21 +284,36 @@ elif input_value == '2':
           <p class="box--small copy--small fragment">The repeated execution of a set of statements is called <strong>iteration</strong></p>
           <div class="fragment"><p class="box--small copy--small">One way to acheive this, is with the <strong>while</strong> loop.</p>
             <pre><code contenteditable class=" small python">
-x = 10
-while x > 0:
-    print x
-    x = x - 1
-print 'Done'
+user_input = raw_input('would you like to quit? (y/n) ')
+
+while user_input != 'y':
+        user_input = raw_input('would you like to quit? (y/n) ')
+
+print 'quitters never win!'
           </code></pre></div>
-          <p class="box--small copy--small fragment">The while statement takes a predicate, and as long as it evaluates to True, the code block beneath it is repeated.</p>
-          <p class="box--small copy--small fragment">This creates a <strong>loop</strong>. Without the <code>x = x - 1</code> statement, <br/>this would be an <strong>infinite loop</strong></p>
+          <p class="box--small copy--small fragment">As long as the while statement evaluates to True, the code block beneath it is repeated.</p>
         </section>
 
-        
         <section>
-            <h3>List Iteration</h3>
-            <p class="copy--small box--small">Lists are also <strong>iterable</strong>.</p>
-            <div class="fragment"><p class="copy--small box--small">Once your list is defined, we can iterate on it,<br/>performing an action on each element</p>
+            <h3>While loops</h3>
+            <p class="box--small copy--small">Consider the following example that uses iteration with a while loop</p>
+            <div class="fragment"><pre><code contenteditable class="small python">
+input_value = raw_input('Enter a positive integer:') 
+user_number = int(input_value)
+while user_number > 0:
+    print "The user's number is still positive, let's subtract 1"
+    user_number = user_number - 1
+print "User's number is no longer positive."
+                                </code></pre></div>
+            <p class="copy--small box--small fragment">This implementation does not work for negative numbers. Why?</p>
+        </section>
+
+       
+        <section>
+            <h3>For loops</h3>
+            <p class="copy--small box--small">It is also useful to loop through a collection of elements, visiting each one to do some work, then stopping once all elements are processed.</p>
+            <p class="copy--small box--small fragment">This can be accomplished with a <strong>for</strong> loop</p>
+            <div class="fragment"><p class="copy--small box--small ">First, we need a collection. We create a <strong>list</strong> of numbers to loop over. This is called <code>numbers</code> in the following example</p>
             <pre><code contenteditable class="small python">
 shipping_cost = 2.5
 prices = [3, 4, 5.25]
@@ -301,39 +322,7 @@ costs = []
 for price in prices:
     costs.append(price + shipping_cost)
 
-for cost in costs:
-    print cost
-            </code></pre></div>
-        </section>
-
-
-        <section>
-            <h3>While loops</h3>
-            <p class="box--small copy--small">Consider the following example that uses iteration to derive a factorial</p>
-            <p class="box--small copy--xsmall fragment">A factorial of a number is equal to that number * every positive integer less than that number. E.g. The factorial of 4 is 4 * 3 * 2 * 1, which equals 24</p>
-            <div class="fragment"><pre><code contenteditable class="small python">
-input_value = raw_input('Enter a positive integer:') # raw_input('')
-n = int(input_value)
-result = 1
-while n > 1:
-    result = result * n
-    n = n - 1
-print "The factorial of " + input_value + " is:"
-print result
-                                </code></pre></div>
-            <p class="copy--small box--small fragment">This implementation does not work for negative numbers. Why?</p>
-        </section>
-
-        <section>
-            <h3>For loops</h3>
-            <p class="copy--small box--small">It is also useful to loop through a collection of elements, visiting each one to do some work, then stopping once all elements are processed.</p>
-            <p class="copy--small box--small fragment">This can be accomplished with a <strong>for</strong> loop</p>
-            <div class="fragment"><p class="copy--small box--small ">First, we need a collection. We create a <strong>list</strong> of numbers to loop over. This is called <code>numbers</code> in the following example</p>
-            <pre><code contenteditable class="small python">
-numbers = [1, 3, 8]
-for number in numbers:
-    print "The current number is:"
-    print number
+print costs
             </code></pre></div>
         </section>
 
@@ -373,10 +362,16 @@ for number in range(5):
         <!-- Let's Develop It - 10 minutes -->
         <section>
             <h3>Let's Develop It</h3>
-            <ul class="list--xtall copy--small box">
-                <li class="fragment">Write a program that takes numbers from user input and adds thems all together for a final result.</li>
-                <li class="fragment">This program should stop taking input, display the answer and exit when the user types "quit".</li>
-            </ul>
+          <p class="copy--small box--small">Given any list of any sort of mixed types,write a script that prints the type each item in the list. </p>
+          <p class="copy--small box--small">You can try this list: <pre>[1, 'hello', 12.33, 'data', [1,2]]</pre></p>
+          <p class="copy--small box--small">The output should look something like this:</p>
+          <pre><code contenteditable class="small python">
+>>>typeIdentifier(list)
+
+1 is a &ltclass int&gt
+hello is a &ltclass string&gt
+12.33 is a &ltclass float&gt
+          </code></pre>
         </section>
 
 
@@ -386,7 +381,7 @@ for number in range(5):
             <p class="copy--small box--small fragment">Import statements can be used to import various specialized libraries - such as scikit or nympy - into our code</p>
             <p class="copy--small box--small fragment">A <strong>library</strong> is a published collection of useful functions for doing a specific type of coding.  There are math, statistics, data science, and graphics libraries, to name a few types.</p>
             <p class="copy--small box--small fragment">The <strong>from</strong> keyword allows us to only import parts of a Python file</p>
-            <div class="fragment "><pre><code contenteditable class="python" style="min-height: 50px;">
+            <div class="fragment "><pre><code contenteditable class="small python">
 from math import sqrt
 sqrt(2)
             </code></pre></div>
@@ -398,7 +393,7 @@ sqrt(2)
                 <li>Write a program that asks the user to guess a number between a given range, such as 1 to 10</li>
                 <li>The program should give the user hints such as "too high" or "too low". Alternatively, the hints might be "warm" or "cold" depending on how close they are to the number</li>
                 <li>The computer will need to have a random number for the user to guess:</li>
-                <pre><code contenteditable class="python" style="min-height: 50px;">
+                <pre><code contenteditable class="small python">
 #At the top of the file
 from random import randint
 
@@ -417,21 +412,6 @@ random_number = randint(1, 10)
 
         <section>
           <h3>Exercise</h3>
-
-          <p>Given any list of any sort of mixed types,write a script that prints the type each item in the list. </p>
-          <p>You can try this list: <pre>[1, 'hello', 12.33, 'data', [1,2]]</pre></p>
-          <br>
-          <pre>typeIdentifier(list)</pre>
-          <pre><code contenteditable class="small python">
-#should output something like this:
-1 is a &ltclass int&gt
-hello is a &ltclass string&gt
-12.33 is a &ltclass float&gt
-          </code></pre>
-        </section>
-
-        <section>
-          <h3>Exercises</h3>
           <p>Write a script that asks the user to guess a number between 1 and 100</p>
           <ul>
             <li class="future"><p>If their guess is within 20, tell them they are 'warm'</p></li>
