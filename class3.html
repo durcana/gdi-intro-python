@@ -306,6 +306,32 @@ george_present = 'George' in names
         </section>
 
         <section>
+            <h3>Data Type: Tuple</h3>
+            <p class="box--small copy--small">A <strong>tuple</strong> is a list that cannot be edited (e.g. immutable), defined with <code>()</code></p>
+            <pre><code contenteditable class="small python">
+lunch = ('sandwich', 'soda')
+            </code></pre>
+        </section>
+
+        <section>
+            <h3>Indexing on Tuples</h3>
+            <div class="fragment">
+            <p class="box--small copy--small">There are two ways to index tuples:</p>
+            <pre><code contenteditable class="small python">
+# Method 1: by index
+food = lunch[0]
+print food
+# Method 2: by 'unpacking'
+food, beverage = lunch
+print food
+print beverage
+            </code></pre></div>
+            <p class="box--small copy--small fragment">
+            IndexError results if an index exceeds the length of the list minus 1</p>
+            <p class="box--small copy--small fragment">Unpacking with incorrect number of variables specified results in a ValueError</p>
+        </section>
+
+        <section>
             <h3>Builtins for data types</h3>
             <p class="copy--small box--small">Python provides several functions that<br/>help us work with these data types.</p>
             <table class="copy--xsmall">
