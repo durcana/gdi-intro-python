@@ -40,7 +40,8 @@
           <h3>Review</h3>
           <ul class="box list--xtall copy--small">
               <li>Method calls</li>
-              <li>Dictionaries</li>
+              <li>Data Type: Dictionaries</li>
+              <li>Data Type: Tuples</li>
               <li>Functions</li>
           </ul>
       </section>
@@ -48,30 +49,13 @@
       <section>
         <h3>What we will cover for the rest of today</h3>
         <ul class="list--xtall copy--small box">
-            <li class="fragment">More data types</li>
+            <li class="fragment">(Even) More Data Types</li>
             <li class="fragment">Combining data types</li>
         </ul>
         </section>
 
         <section>
-            <h3>TUPLES</h3>
-            <p class="copy--small">Tuples are like lists, but they are immutable. They are particularly good at storing data types of a fixed and predictable size. Use () to define tuples</p>
-            <p class="copy--small">An x, y coordinate pair, or the RGB values of a color are good candidates for tuples.</p>
-            <pre><code contenteditable class="small python">
-point = (0, 1)
-x = point_a[0]
-y = point_a[1]
-
-# or, even better
-
-point = (0, 1)
-x, y = point_a
-# x is 0, y is 1
-            </code></pre>
-        </section>
-
-        <section>
-            <h3>SETS</h3>
+            <h3>Data Type: Sets</h3>
             <p class="copy--small">Sets are unordered data types whose elements are unique. Therefore, adding a value to a set that already has it, does nothing.</p>
             <p class="copy--small">Sets can be created with comma separated elements enclosed in {} in Python 2.7 or greater. Very often, one will make a list and use the set() function to eliminate duplicates.</p>
             <p class="copy--small">Sets have an add method, which like append for lists, adds an element to a set.</p>
@@ -89,7 +73,7 @@ set([1, 2, 3])
         </section>
 
         <section>
-            <h3>Lists of ... Lists</h3>
+            <h3>Data Type: Lists of ... Lists</h3>
             <p class="copy--small box--small">Lists can contain not only numbers or strings, but also other lists.</p>
             <p class="copy--small box--small fragment">Such a structure is said to be  <strong>nested</strong></p>
             <div class="fragment"><p class="copy--small box--small">The following is a list of lists:</p>
@@ -175,7 +159,7 @@ family_shopping_list['fran'].append('strawberries')
         <section>
             <h3>Means of Combination</h3>
             <p class="copy--small box--small">Lists, dictionaries, and other data types are all<br/>a means of combination.</p>
-            <p class="copy--small box--small fragment">They can be freely combined to create the<br/>data structure needed for a particular problem</p>
+            <p class="copy--small box--small fragment">They can be freely combined to create the<br/>data structure needed for a particular problem.</p>
             <div class="fragment"><p class="copy--xsmall box--small">Eg. A list of dictionaries with lists</p>
             <pre><code contenteditable class="python">
 all_tweets = [
@@ -280,6 +264,10 @@ squares = map(square, range(10))
                 <section>
                     <h3>Future Resources</h3>
                     <table class="box copy--xsmall">
+                        <tr>
+                            <td style="width: 30px;"><a href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python</a></td>
+                            <td style="padding-bottom: 20px;">Online book of 'practical programming for total beginners'.</td>
+                        </tr>
                         <tr>
                             <td style="width: 360px;"><a href="http://docs.python.org/2/">Python.org Documentation</a></td>
                             <td style="padding-bottom: 20px;">Official Python Documentation</td>

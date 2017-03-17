@@ -96,9 +96,10 @@
         <ul class="list--tall copy--small box--small">
           <li class ="fragment">System Administration (Fabric, Salt, Ansible)</li>
           <li class ="fragment">3D animation and image editing (Maya, Blender, Gimp)</li>
-          <li class ="fragment">Data Science (numpy, scipy)</li>
+          <li class ="fragment">Data Science (pandas, sklearn, nltk, tensorflow)</li>
           <li class ="fragment">Web development (Django, Flask)</li>
           <li class ="fragment">Game Development (Civilization 4, EVE Online)</li>
+          <li class ="fragment">Web scraping (selenium, scrapy)</li>
         </ul>
       </section>
 
@@ -110,9 +111,9 @@
           <li>Buzzfeed</li>
           <li>Google</li>
           <li>NASA</li>
+          <li>(many, many others)</li>
         </ul>
       </section>
-
 
       <!-- WHAT IS PROGRAMMING -->
       <section>
@@ -124,9 +125,54 @@
               <li class="fragment">Don't focus on what's "under the hood" for now. We will "drive the car" first.</li>
           </ul>
       </section>
+       <section>
+          <h3>NOTE: Computers need simple, clear instructions</h3>
+          <img src="img/confusedrobot.jpg" alt="Confused robot"/>
+          <p class="credit">Photo credit: <a href="http://www.flickr.com/photos/baboon/3946055/" target="_blank">baboon</a> <a href="http://creativecommons.org/licenses/by-nc/2.0/" target="_blank">cc</a></p>
+       </section>
+
+        <section>
+          <h3>Thinking like a programmer</h3>
+          <p>Computers are great at <em>processing</em>. They are bad at <em>understanding</em>.</p>
+          <p>When you write a program, you must break down every step into simple pieces.</p>
+        </section>
+
+        <section>
+          <h3>Example: Draw a Square</h3>
+          <ol class="fragment">
+            <li>Find a whiteboard and a dry erase marker.</li>
+            <li>Uncap the dry erase maker.</li>
+            <li>Hold the marker in your hand.</li>
+            <li>Place the marker against the whiteboard.</li>
+            <li>Move your hand 1 foot to the right.</li>
+            <li>Stop.</li>
+            <li>Move your hand 1 foot down...</li>
+          </ol>
+        </section>
+
+        <section>
+          <h3>Example: Make a Sandwich</h3>
+          <iframe title="Sandwich video" width="560" height="315" src="https://www.youtube.com/embed/XWe4iohhmIw" frameborder="0" allowfullscreen></iframe>
+          <p class="credit">Source: <a>Harvard Students Making Sandwich: CS 50 Algorithm Intro</a></p>
+        </section>
+
+        <section>
+          <h3>Basically, computers can be hard to work with!</h3>
+          <img src="img/computer-toddler.jpg" alt="Toddler using old word processor"/>
+          <p class="credit">Photo credit: <a href="https://flic.kr/p/5Uvapm" target="_blank">Dan Hatton</a> <a href="https://creativecommons.org/licenses/by-nc-nd/2.0/" target="_blank">cc</a></p>
+
+          <aside class="notes">Reassure the students! Coding is difficult, and it may take time to get good at it. Also, the natural state of code is broken. It's normal to have error messages, </aside>
+        </section>
+
+       <section>
+          <h3>How does Python work?</h3>
+          <img src="img/how-python-works.jpg" alt="How Python works"/>
+          <p class="credit">Photo credit: <a href="http://opensourceforgeeks.blogspot.in/2015/10/how-python-works.html" target="_blank">Open Source for Geeks</a> </p>
+          <p>If the interpreter finds code it doesn't understand, it stops running and creates an error message.</p>
+       </section>
 
       <section>
-          <h4>Command line, Python Shell, Text Editors</h4>
+          <h4>Command line, Python Shell, Text Editors, Notebooks</h4>
           <table class="copy--small box">
               <tr>
                   <td style="width: 200px;"><strong>Terminal</strong></td>
@@ -140,6 +186,10 @@
                   <td><strong>Text Editor</strong></td>
                   <td style="padding-bottom: 20px;">A <span class="blue">program that opens text files</span> and allows the user to edit and save them. (Different than a word processor).</td>
               </tr>
+              <tr>
+                  <td><strong>Notebook (e.g. Jupyter, Zeppelin)</strong></td>
+                  <td style="padding-bottom: 20px;">A <span class="blue">document containing code and text </span> and allows user to <span class="green">interactively</span> explore the results of code and simultaneously write-up findings in a reproducible workflow. (Different than a word processor).</td>
+              </tr>              
           </table>
       </section>
 
@@ -180,7 +230,7 @@
               </li>
               <li>
                   <strong>Windows Users:</strong> After installing Python, open the "powershell" program and type:
-                  <br/><code class="copy--xsmall">[Environment]::SetEnvironmentVariable("Path", "$env:Path;C:\Python34", "User")</code>
+                  <br/><code class="copy--xsmall">[Environment]::SetEnvironmentVariable("Path", "$env:Path;C:\Python27", "User")</code>
               </li>
               <li>
                   Locate and run the terminal program. 
@@ -230,7 +280,7 @@
         </section>
 
         <section>
-            <h3>Strings</h3>
+            <h3>Data Type: Strings</h3>
             <div class="box--small"><pre><code contenteditable class="python" style="min-height: 50px;">
 a = 'Hello '
 b = 'World'
@@ -321,6 +371,11 @@ b = 10
           <p class="copy--small">There are also <strong>semantic</strong> errors.<br/><small>These are harder to catch because the computer can't catch them for us.</small></p>
         </section>
 
+        <section>
+          <h3>Comments</h3>
+          <p>You can leave comments in your code&mdash;notes that people and future you (!) can read (and appreciate) but computers will ignore.</p>
+<pre><code class="python"># This is a sample comment.</code></pre>
+        </section>
 
       <!-- Let's develop it: 10 minutes -->
       <section>
@@ -356,6 +411,11 @@ b = 10
                     <td>Change directory</td>
                     <td style="padding-bottom: 20px">Change to another folder. Takes the folder name as an argument. 'cd ..' goes up a directory</td>
                 </tr>
+                <tr>
+                    <td><code>mkdir</code></td>
+                    <td>Make directory</td>
+                    <td style="padding-bottom: 20px">Creates a folder with specified name in the current folder</td>
+                </tr>                
             </table>
         </section>
 
