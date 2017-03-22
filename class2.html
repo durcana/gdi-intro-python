@@ -368,7 +368,7 @@ for number in range(5):
 
         <section>
         <h3>Variable name in for loops</h3>
-        <p class="copy--small box--small">In our last example, we named our variable number.</p>
+        <p class="copy--small box--small">In our last example, we named our variable "number".</p>
         <p class="copy--small box--small fragment">We could have chosen any word, and the computer would process the code.</p>
         <div class="fragment"><p class="copy--small box--small">This is a great example of the computer
         <em>processing,</em> not <em>understanding.</em></p>
@@ -392,37 +392,6 @@ The word little does not contain the letter a.
           </code></pre></div>
           <p class="copy--small box--small fragment">"What about the letter "m"?</p>
         </section>
-
-
-        <section>
-            <h3>Import statements</h3>
-            <p class="copy--small box--small">The <strong>import</strong> statement allows us to use Python code that is defined in one file in a different file</p>
-            <p class="copy--small box--small fragment">Import statements can be used to import various specialized libraries - such as sklearn or pandas - into our code</p>
-            <p class="copy--small box--small fragment">A <strong>library</strong> is a published collection of useful functions for doing a specific type of coding.  There are math, statistics, data science, and graphics libraries, to name a few types.</p>
-            <p class="copy--small box--small fragment">The <strong>from</strong> keyword allows us to only import parts of a Python file</p>
-            <div class="fragment "><pre><code contenteditable class="small python">
-from math import sqrt
-sqrt(2)
-            </code></pre></div>
-        </section>
-
-        <section>
-            <h3>Let's Develop It</h3>
-            <ul class="list--tall copy--small box--small">
-                <li>Write a program that asks the user to guess a number between a given range, such as 1 to 10</li>
-                <li>The program should give the user hints such as "too high" or "too low". Alternatively, the hints might be "warm" or "cold" depending on how close they are to the number</li>
-                <li>The computer will need to have a random number for the user to guess:</li>
-                <pre><code contenteditable class="small python">
-#At the top of the file
-from random import randint
-
-# Use this line where you need to have a random number.
-# (Hint, this is probably used before the user input loop)
-random_number = randint(1, 10)
-                </code></pre>
-            </ul>
-        </section>
- 
 
       <!-- OUTRO -->
         <section>

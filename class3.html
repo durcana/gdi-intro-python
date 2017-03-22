@@ -89,7 +89,7 @@ str(32)
         <section>
             <h3>Creating a Function</h3>
             <p class="copy--small box--small">The following example is a <strong>function definition</strong>.<br/>This allows us to create our own functions</p>
-            <pre><code contenteditable class="small python">
+            <pre><code contenteditable class="python">
 def print_plus_5(x):
     print x + 5
             </code></pre>
@@ -102,24 +102,38 @@ def print_plus_5(x):
             </ul>
         </section>
 
+        <section>
+            <h3>What to name your arguments</h3>
+            <p class="copy--small box--small">Similar to for loops, you decide how to refer to your arguments<p>
+            <div class="copy--small box--small fragment"><p>We just used x as our argument, but I can replace that with duck and the function will work the same</p>
+            <pre><code contenteditable class="python">
+def print_plus_5(duck):
+    print duck + 5
+            </code></pre>
+            <p class="copy--small box--small fragment">When naming your functions and your
+            arguments, you should use terms based on the task at hand</p>
+        </section>
+
 
         <section>
             <h3>Function returns</h3>
             <p class="copy--small box--small">A function can also <strong>return</strong> a value</p>
-            <div class="copy--small box--small fragment"><p>To do this, one uses the <strong>return</strong> keyword</p>
-            <pre><code contenteditable class=" small python">
+            <div class="copy--small box--small fragment"><p>Return allows us to save the result and use it later</p>
+            <pre><code contenteditable class="python">
+# function without return
 def plus_5(x):
-    return x + 5
+    x + 5
 
 y = plus_5(4)
 print y
+
+#function with return
+def return_plus_5(x):
+    return x + 5
+
+y = return_plus_5(4)
+print y
             </code></pre></div>
-            <ul class="list--tall copy--xsmall">
-                <li class="fragment">This allows us to call a function to obtain a value for later use.<br/>(Not the same as printing the value)</li>
-                <li class="fragment">In this example, the function call <code>plus_5(4)</code> evaluates to 9, and <code>y</code> is set to this value</li>
-                <li class="fragment">To determine what a function will return, use the <strong>substitution method</strong>.</li>
-                <li class="fragment">If return is not used, the function returns <strong>None</strong></li>
-            </ul>
         </section>
 
         <section>
@@ -135,14 +149,14 @@ grass()
         </section>
 
         <section>
-            <h4>Functions with more than one argument</h4>
+            <h3>Functions with more than one argument</h3>
             <p class="copy--small box--small">A function can also take more than one argument separated by commas. For example:</p>
             <pre><code contenteditable class="small python">
-def find_rectangle_area(width, height):
-    return width * height
+def personal_info(name, age):
+    return "My name is " + name + " and I am " + str(age) + " years old."
 
-area = find_rectangle_area(3, 4)
-print area
+my_information = personal_info("Amy", 26)
+print my_information
             </code></pre>
         </section>
 
@@ -163,100 +177,56 @@ print area
         <section>
             <h3>Function Composition</h3>
             <p class="copy--small box--small">Functions can also call other functions.</p>
-            <p class="copy--small box--small fragment">You can use this to break up tasks<br/>into small pieces that rely on others to do their work.</p>
-            <p class="copy--small box--small"><strong>Function composition</strong> is when the <span class="blue">output</span><br/>of one function <span class="green">acts as the input</span> of another</p>
-            <div class="fragment">
-              <pre><code contenteditable class=" python">from math import sqrt
+            <p class="copy--small box--small fragment">You can do this to break up tasks into small pieces and make your code easier to follow.</p>
+            <p class="copy--small box--small fragment"><strong>Function
+                    composition</strong> is when the <strong>output</strong> of
+            one function <strong>acts as the input</strong> of another</p>
+            <div class="fragment"><pre><code contenteditable class=" python">
+def squared(n):
+    return n*n
 
-def find_distance(p1, p2):
-    return abs(p1 - p2)
+def area(x, y)
+    return squared(x) + squared(y)
 
-def get_hypotenuse(a, b):
-    return sqrt(a ** 2 + b ** 2)
+#what to do?
 
-def print_hypotenuse(x1, y1, x2, y2):
-    print 'The diagonal of the rectangle is:'
-    print get_hypotenuse(find_distance(x1, x2), find_distance(y1, y2))
-
-print_hypotenuse(1,2,3,4)
-
-# f(g(x))
-# is the same as:
-#     y = g(x)
-#     f(y)
             </code></pre></div>
         </section>
  
         <section>
-            <h3>Remember</h3>
-            <p class="copy--small box"><strong>Functions</strong> are called by their name - <code>my_function()</code></p>
-            <p class="copy--small box">They can be passed data in the form of parameters - <code>my_function(my_parameter)</code></p>
-            <p class="copy--small box">They usually return some sort of value. This all happens explicitly.</p>
-        </section>
-
-</section>
-
-        <!-- Let's develop it: 15 minutes -->
-        <section>
-            <h3>Let's Develop It</h3>
-            <ul class="list--xtall copy--small box--small">
-                <li>Write a program that uses at least one function to solve a geometry problem</li>
-                <li>Hint: You might use a loop that obtains user input, does the calculation, then prints the answer. As before, the user should be able to quit by entering "quit"</li>
-                <li>Hint: You can import your function in the shell and call it with different parameters to test it out</li>
-                <li>Hint: Download <a href="http://nicklang.com/gdi-intro-python/examples/geometry.py">geometry.py</a> and use it as an example</li>
-            </ul>
-        </section>
-
-
-        <section>
           <h3>Method Calls</h3>
-            <p class="copy--small box"><strong>Methods</strong> are also called by name but are associated with an object.<br/><small>Really, they are identical to functions except that the data passed into it is passed implicitly.</small></p>
-            <p class="copy--xsmall box fragment">For example, the integers and strings we've been using have methods attached to them.</p>
-            <p class="copy--xsmall box fragment">We can use the <code>dir()</code> function to see the methods of an object<br/>and <code>help()</code> to see what they do.</p>
+            <p class="copy--small box"><strong>Methods</strong> are also called by name but are associated with a data type.</p>
+            <p class="copy--small box fragment">We have already called methods for strings and integers</p>
             <div class="fragment"><pre><code contenteditable class=" small python">a = 4
-print dir(a)
-
 name = 'caleb'
 sentence = 'the quick brown fox did the thing with the thing'
-print dir(name)
+a_list = [1, 2, 3]
 
 print name.capitalize()
 print sentence.count('the')
 
-help(name.upper)
+a_list.append(4)
+print a_list
             </code></pre></div>
         </section>
 
-        <!-- Let's develop it: 5 minutes -->
-        <section>
-            <h3>Let's Develop It</h3>
-            <p class="copy--small box--small">Open a Python shell and define a string varaible</p>
-            <p class="copy--small box--small">Use <code>dir(string_variable)</code> and the <code>help()</code> function<br/>to explore the various methods
-            <p class="copy--small box--small"><strong>Hint:</strong> Like functions, some methods take arguments and others don't</p>
-            <p class="copy--small box--small"><strong>Hint:</strong> Use <code>help()</code> on a method.<br/><small>It will tell you the arguments to use and the expected behavior</small></p>
-            <p class="copy--small box--small"><strong>Hint:</strong> Don't be afraid of errors.<br/><small>They seem to be in a foreign language but they are there to help you.<br/><i>Read them carefully.</i></small></p>
-        </section>
-
-
         <section>
             <h3>Data Type: Dictionaries</h3>
-            <p class="box--small copy--small">A <strong>dictionary</strong> (sometimes called a "hashmap") is a data type of key/value pairs, defined with <code>{}</code></p>
+            <p class="box--small copy--small">A <strong>dictionary</strong> is a data type of key/value pairs, defined with <code>{}</code></p>
             <pre><code contenteditable class="small python">
 menu_categories = {
     'food': 'stuff you eat',
     'beverage': 'stuff you drink',
 }
             </code></pre>
-            <p class="copy--small box--small fragment">Think of words in a dictionary.<br/><small>The words are keys and the definitions are values.</small></p>
-            <p class="copy--small box--small fragment">This dictionary would be indexed with strings such as 'food' and 'beverage' instead of integers like in a list</p>
+            <p class="copy--small box--small fragment">Think of words in a dictionary. The words are keys and the definitions are values.</p>
         </section>
 
         <section>
             <h3>Indexing on Dictionaries</h3>
             <p class="box--small copy--small">Dictionaries aren't literally just for definitions. They represent a group of mappings. A mapping might be: menu items -> costs.</p>
-            <p class="box--small copy--small fragment">We can also index on dictionaries.</p>
+            <p class="box--small copy--small fragment">We can also index on dictionaries, but using the key instead of integers like in a list</p>
             <div class="fragment">
-            <p class="box--small copy--small">The most common indexes are strings,<br/>but they can be whatever type the keys are.</p>
             <pre><code contenteditable class="small python">
 menu = {
     'tofu': 4,
@@ -265,7 +235,6 @@ menu = {
 tofu_cost = menu['tofu']
             </code></pre></div>
             <p class="box--small copy--small fragment">Indexing on a key that doesn't exist results in a KeyError</p>
-            <p class="box--small copy--small fragment">If you aren't certain a key is present, you can use the <code>get</code> method</p>
         </section>
 
         <section>
@@ -285,7 +254,8 @@ print menu.get('pizza')
 print menu.get('water')
 print menu.get('juice', 5)
             </code></pre>
-            <p class=" box--small copy--small"><code>get</code> will return None if the key isn't present<br/>or a default value if provided.</p>
+            <p class="box--small copy--small">If you aren't certain a key is present, you can use the <code>get</code> method</p>
+            <p class=" box--small copy--small"><code>get</code> will return None if the key isn't present.</p>
         </section>
 
         <section>
@@ -299,9 +269,7 @@ if 0 in color:
 
 menu = {'tofu': 4}
 print 'tofu' in menu
-
-names = ['Mary', 'Martha', 'George']
-george_present = 'George' in names
+print 4 in menu
             </code></pre></div>
         </section>
 
