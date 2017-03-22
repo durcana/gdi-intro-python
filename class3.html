@@ -178,18 +178,19 @@ print my_information
             <h3>Function Composition</h3>
             <p class="copy--small box--small">Functions can also call other functions.</p>
             <p class="copy--small box--small fragment">You can do this to break up tasks into small pieces and make your code easier to follow.</p>
-            <p class="copy--small box--small fragment"><strong>Function
-                    composition</strong> is when the <strong>output</strong> of
-            one function <strong>acts as the input</strong> of another</p>
+            <p class="copy--small box--small fragment"><strong>Function composition</strong> is when the <strong>output</strong> of one function <strong>acts as the input</strong> of another</p>
             <div class="fragment"><pre><code contenteditable class=" python">
-def squared(n):
-    return n*n
+def get_name():
+    return raw_input("What is your name?")
 
-def area(x, y)
-    return squared(x) + squared(y)
+def get_email_address():
+    return raw_input("What is your address?")
 
-#what to do?
-
+def register():
+    print "Please fill out the following information to register:"
+    name = get_name()
+    email = get_email_address()
+    print name, "is registered under the email address", email
             </code></pre></div>
         </section>
  
@@ -197,7 +198,8 @@ def area(x, y)
           <h3>Method Calls</h3>
             <p class="copy--small box"><strong>Methods</strong> are also called by name but are associated with a data type.</p>
             <p class="copy--small box fragment">We have already called methods for strings and integers</p>
-            <div class="fragment"><pre><code contenteditable class=" small python">a = 4
+            <div class="fragment"><pre><code contenteditable class=" small python">
+a = 4
 name = 'caleb'
 sentence = 'the quick brown fox did the thing with the thing'
 a_list = [1, 2, 3]
