@@ -476,14 +476,15 @@ print 'Hello World!'
             <p class="copy--small box--small">To obtain user input, use <code>raw_input()</code></p>
             <p class="copy--small box--small">Change the class1.py text to the following and run it again</p>
             <pre><code contenteditable class="python" style="min-height: 50px;">
-# Calculating the radius of a circle. The equation is a=pi*r^2
-input_value = raw_input("Enter a radius:")
-radius = float(input_value)
-area = 3.14159 * radius * radius
-print "The area of a circle with radius " + input_value + " is:"
-print area
+name = raw_input("What is your name?")
+age = raw_input("How old are you?")
+age_int = int(age)
+print "Your name is" + name + " and you are " age + " years old."
+
+type(age)
+type(age_int)
             </code></pre>
-            <p class="copy--small box--small">The user's input is a string, so we use <code>float()</code> to make it a number</p>
+            <p class="copy--small box--small">The user's input is always a string. Keep that in mind when working on other problems!</p>
         </section>
 
       <!-- Let's develop it: 15 minutes -->
