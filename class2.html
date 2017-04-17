@@ -124,7 +124,6 @@ words = ['list', 'of', 'strings']
             <div class="fragment">
             <p class="copy--small box--small">A list can, but doesn't have to be of all one type.<br/><small>A list of one type is <strong>homogenous</strong> as opposed to a list of multiple types, which is <strong>heterogeneous</strong>.</small></p>
             <pre><code contenteditable class="small python">
-# heterogenous list
 words = [0, 'list', 'of', 3, 'strings', 'and', 'numbers']
             </code></pre></div>
         </section>
@@ -154,25 +153,41 @@ print to_do_list
 numbers = [10, 20, 30]
 print numbers[0]
             </code></pre></div>
+            <p class="copy--small box--small fragment">Lists (and other data types) start at the number 0 and count up.</p>
         </section>
 
 
         <section>
-            <h3>Indexing continued</h3>
+            <h3>Length and More Indexing</h3>
 
-            <p class="box--small copy--small">Lists and other data types in Python are <strong>zero indexed</strong>.<br/><small>This means that the number 0 refers to first element in the list.</small></p>
+            <p class="box--small copy--small">You can get the length of a list with <strong>len(list)</strong></p>
+            <p class="box--smail copy--small">You can also use the length of the list to index the last element.</p>
             <pre><code contenteditable class="small python">
 to_do_list = [
     'learn python', 'read email', 'make lunch',
 ]
-print to_do_list[0]
-print to_do_list[1]
+print len(to_do_list)
 
+print to_do_list[0]
+print to_do_list[2]
+
+print to_do_list[len(to_do_list)]
 print to_do_list[len(to_do_list) - 1]
             </code></pre>
             <p class="box--small copy--xsmall fragment">An IndexError results if an index exceeds the length of the list minus 1</p>
         </section>
 
+        <section>
+            <h3>Let's Develop It</h3>
+            <p class="copy--small box--small">Take the list below and try to do the following:</p>
+            <p class="copy--small box--small">Append to the list a chore you have to do</p>
+            <p class="copy--small box--small">Use indexing to find the first and third chores on the list</p>
+            <p class="copy--small box--small">Find the length of the list</p>
+            <p class="copy--small box--small">Use indexing to find the last chore in the list</p>
+            <pre><code contenteditable class="small python">
+['Make the bed', 'Cook dinner', 'Feed the dog', 'Buy groceries']
+            </code></pre>
+        </section>
 
         <section>
             <h3>Conditionals</h3>
@@ -201,7 +216,7 @@ else:
         <section>
             <h3>Indentation</h3>
             <p class="copy--small box--small">In Python, <strong>blocks</strong> <span class="green">begin when text is indented</span> and<br/><span class="red">ends when it returns to the previous indentation</span></p>
-            <p class="copy--small box--small fragment">Let's write a python file that practices indentation and conditionals</p>
+            <p class="copy--small box--small fragment">Indentation is <strong>very</strong> sensitive in python. Let's write a python file that practices indentation and conditionals</p>
             <div class="fragment">
             <p class="copy--small box--small">Write this into your text editor and save the file as class2.py in your gdi-intro-python folder.
             <pre><code contenteditable class=" python">
@@ -354,59 +369,40 @@ for number in range(5):
     print "The current number is:"
     print number
             </code></pre>
-            <p class="fragment copy--small box--small">The for loop has three parts:</p>
+            <p class="fragment copy--small box--small">This for loop has three parts:</p>
             <ul class="list--tall copy--xsmall">
                 <li class="fragment">The collection to loop over - range(5)</li>
-                <li class="fragment">The name to give each element when the loop begins again - number</li>
+                <li class="fragment">The name WE give each element when the loop begins again - number</li>
                 <li class="fragment">The block of statements to execute with the element - The two print statements</li>
             </ul>
                 </section>
 
+        <section>
+        <h3>Variable name in for loops</h3>
+        <p class="copy--small box--small">In our last example, we named our variable "number".</p>
+        <p class="copy--small box--small fragment">We could have chosen any word, and the computer would process the code.</p>
+        <div class="fragment"><p class="copy--small box--small">This is a great example of the computer
+        <em>processing,</em> not <em>understanding.</em></p>
+        <pre><code contenteditable class="small python">
+for moose in range(5):
+    print "The current number is:"
+    print moose
+        </code></pre></div>
+        </section>
+
         <!-- Let's Develop It - 10 minutes -->
         <section>
             <h3>Let's Develop It</h3>
-          <p class="copy--small box--small">Given any list of any sort of mixed types, write a script that prints the type each item in the list. </p>
-          <p class="copy--small box--small">You can try this list: <pre>[1, 'hello', 12.33, 'data', [1,2]]</pre></p>
-          <p class="copy--small box--small">The output should look something like this:</p>
-          <pre><code contenteditable class="small python">
->>>typeIdentifier(list)
-
-1 is a &lttype 'int'&gt
-hello is a &lttype 'string'&gt
-12.33 is a &lttype 'float'&gt
-          </code></pre>
+          <p class="copy--small box--small">Let's iterate through the following list:</p>
+          <p class="copy--small box--small"><pre>["Mary", "had", "a", "little", "lamb"]</pre></p>
+          <p class="copy--small box--small fragment">For each word, check if the letter "a" is in the list.</p>
+          <div class="fragment"><p class="copy--small small--box">For example:</p>
+          <pre><code contenditable class="small python">
+The word Mary contains the letter a.
+The word little does not contain the letter a.
+          </code></pre></div>
+          <p class="copy--small box--small fragment">"What about the letter "m"?</p>
         </section>
-
-
-        <section>
-            <h3>Import statements</h3>
-            <p class="copy--small box--small">The <strong>import</strong> statement allows us to use Python code that is defined in one file in a different file</p>
-            <p class="copy--small box--small fragment">Import statements can be used to import various specialized libraries - such as sklearn or pandas - into our code</p>
-            <p class="copy--small box--small fragment">A <strong>library</strong> is a published collection of useful functions for doing a specific type of coding.  There are math, statistics, data science, and graphics libraries, to name a few types.</p>
-            <p class="copy--small box--small fragment">The <strong>from</strong> keyword allows us to only import parts of a Python file</p>
-            <div class="fragment "><pre><code contenteditable class="small python">
-from math import sqrt
-sqrt(2)
-            </code></pre></div>
-        </section>
-
-        <section>
-            <h3>Let's Develop It</h3>
-            <ul class="list--tall copy--small box--small">
-                <li>Write a program that asks the user to guess a number between a given range, such as 1 to 10</li>
-                <li>The program should give the user hints such as "too high" or "too low". Alternatively, the hints might be "warm" or "cold" depending on how close they are to the number</li>
-                <li>The computer will need to have a random number for the user to guess:</li>
-                <pre><code contenteditable class="small python">
-#At the top of the file
-from random import randint
-
-# Use this line where you need to have a random number.
-# (Hint, this is probably used before the user input loop)
-random_number = randint(1, 10)
-                </code></pre>
-            </ul>
-        </section>
- 
 
       <!-- OUTRO -->
         <section>

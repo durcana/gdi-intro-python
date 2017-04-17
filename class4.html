@@ -39,10 +39,9 @@
       <section>
           <h3>Review</h3>
           <ul class="box list--xtall copy--small">
+              <li>Functions</li>
               <li>Method calls</li>
               <li>Data Type: Dictionaries</li>
-              <li>Data Type: Tuples</li>
-              <li>Functions</li>
           </ul>
       </section>
 
@@ -57,9 +56,9 @@
         <section>
             <h3>Data Type: Sets</h3>
             <p class="copy--small">Sets are unordered data types whose elements are unique. Therefore, adding a value to a set that already has it, does nothing.</p>
-            <p class="copy--small">Sets can be created with comma separated elements enclosed in {} in Python 2.7 or greater. Very often, one will make a list and use the set() function to eliminate duplicates.</p>
-            <p class="copy--small">Sets have an add method, which like append for lists, adds an element to a set.</p>
-            <pre><code class="python">
+            <p class="copy--small fragment">Sets can be created with comma separated elements enclosed in {} in Python 2.7 or greater.</p>
+            <p class="copy--small fragment">Very often, one will make a list and use the set() function to eliminate duplicates.</p>
+            <pre class="fragment"><code class="python">
 >>> list_a = [0, 3, 2, 0, 2, 7]
 >>> set_a = set(list_a)
 >>> print set_a
@@ -68,14 +67,15 @@ set([0, 2, 3, 7])
 >>> set_b = {1, 2, 1, 3}
 >>> print set_b
 set([1, 2, 3])
-            </code> </pre>
-            <p class="copy--small">Sets have nice methods for reasoning about their relationship to other sets. (Think Venn Diagram)</p>
+            </code></pre>
+            <p class="copy--small fragment">Sets have an add method, which like append for lists, adds an element to a set.</p>
         </section>
 
         <section>
             <h3>Data Type: Lists of ... Lists</h3>
-            <p class="copy--small box--small">Lists can contain not only numbers or strings, but also other lists.</p>
-            <p class="copy--small box--small fragment">Such a structure is said to be  <strong>nested</strong></p>
+            <p class="copy--small box--small">As we have already seen, an element in a
+            list can be other lists.</p>
+            <p class="copy--small box--small fragment">Lists inside of a list are referred to as <strong>nested</strong></p>
             <div class="fragment"><p class="copy--small box--small">The following is a list of lists:</p>
             <pre><code contenteditable class="small python">
 game_board = [
@@ -91,7 +91,7 @@ game_board = [
             <h3>Nested Lists continued</h3>
             <p class="copy--small box--small">A list can be appended to a list as well</p>
             <pre><code contenteditable class="small python">
-mary_shopping_list = ['apples', 'bananas', 'chicken', 'dog food', 'ice cream']
+mary_shopping_list = ['apples', 'bananas', 'chicken', 'ice cream']
 fran_shopping_list = ['ice cream', 'beef', 'peppers', 'apples']
 bob_shopping_list = ['chicken', 'peppers']
 
@@ -137,7 +137,7 @@ for card in hand:
             <p class="copy--small box--small">A dictionary can also contain values that are themselves<br/>other data types, such as lists.</p>
             <div class="fragment"><p class="copy--xsmall box--small">Let's revisit the group of to do lists and find a better representation:</p>
             <pre><code contenteditable class="small python">
-mary_shopping_list = ['apples', 'bananas', 'chicken', 'dog food', 'ice cream']
+mary_shopping_list = ['apples', 'bananas', 'chicken', 'ice cream']
 fran_shopping_list = ['ice cream', 'beef', 'peppers', 'apples']
 bob_shopping_list = ['chicken', 'peppers']
 
@@ -182,8 +182,7 @@ all_tweets = [
         <p></p>
         <pre><code contenteditable class=" python">
 character = {
-    'x': 10,
-    'y': 20,
+    'level': 'beginner',
     'health': 100,
 }
 
@@ -222,7 +221,7 @@ squares = map(square, range(10))
                     <p class="box--small copy--small fragment">Write a function that prints the double<br/>of every number from 0 to 10 using a for loop</p>
                     <p class="box--small copy--small fragment">Write a function that prints the double<br/>of every number from 0 to 10 using a range</p>
                     <p class="box--small copy--small fragment">Write a function that prints the double<br/>of every number from 0 to 10 using a map</p>
-                    <p class="box--small copy--small fragment">Write a map that takes in a list and appends " or I'll be a monkey's uncle" to every item in that list.  (input: [1,4], output: ["1 or I'll be a monkey's uncle"], "2 or I'll be a monkey's uncle"])</p>
+                    <p class="box--small copy--small fragment">Write a map that takes in a list and appends "or I'll be a monkey's uncle" to every item in that list.  (input: [1,4], output: ["1 or I'll be a monkey's uncle"], "2 or I'll be a monkey's uncle"])</p>
                 </section>
 
                 <section>
@@ -297,7 +296,7 @@ squares = map(square, range(10))
 
         <section>
         <h3>Survey</h3>
-        <p class="box--small copy--small fragment">Please fill out this <a href="https://docs.google.com/forms/d/1kiDOjzlHN3FoYbbveW3Syc816L1oILHrfIS6CKrIXt0/viewform">survey</a> to let us know how you felt about this class, and if there's any ways we can improve.</p>
+        <p class="box--small copy--small fragment">Please fill out this <a href="http://bit.ly/GDI-NYC">survey</a> to let us know how you felt about this class, and if there's any ways we can improve.</p>
         </section>
  
         <section>
